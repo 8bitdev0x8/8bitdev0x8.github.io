@@ -1,0 +1,85 @@
+# Site settings
+title: 8bitdev0x8 blogs # site title
+description: >- # site description
+  blog for open-source enthusiast.
+lang: en-US # default lang
+timezone: Asia/Kolkata # set your timezone
+repo: https://github.com/8bitdev0x8 # site repo [optional]
+mode: light # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: 8bitdev0x8 # author name
+  bio: >- # tell to the world
+     a blog for open-source enthusiast.
+  username: 8bitdev0x8 # general username
+  github: 8bitdev0x8 # github username
+  twitter: twitter_username # twitter username
+  facebook: facebook_username # facebook username
+  email: 8bitdev0x8@gmail.com # email adress
+  avatar: /assets/img/jekyll/batman.png # change with your own avatar
+
+# URL settings
+url: "https://github.com/8bitdev0x8" #
+baseurl:
+permalink: /:title/
+google_analytics: UA-198231381-1 # leave it blank if not wish
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles

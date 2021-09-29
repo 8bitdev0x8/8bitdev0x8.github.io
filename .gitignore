@@ -1,0 +1,6 @@
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+_drafts
+klise-*.gem
+Gemfile.lock
