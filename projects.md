@@ -99,23 +99,23 @@ This UI prototype was created as part of a master's project focused on developin
 
 <div class="uiux-gallery">
 	<div class="uiux-item">
-		<img src="/assets/img/projects/UI/users_cmgb13uge00w9sj014jrv7djf_32pMGwKjkHgNtha1-iPhone20Pro20-%202.png" alt="Price Comparison App - Product List" class="bento-project-img" />
+		<img src="/assets/img/projects/UI/202.png" alt="Price Comparison App - Product List" class="bento-project-img" />
 		<p><strong>Product List:</strong> Displays grocery items with prices from multiple stores for easy comparison.</p>
 	</div>
 	<div class="uiux-item">
-		<img src="/assets/img/projects/UI/users_cmgb13uge00w9sj014jrv7djf_AVzasybp4xVSRZ7d-iPhone20Pro20-%201.png" alt="Price Comparison App - Store Selection" class="bento-project-img" />
+		<img src="/assets/img/projects/UI/201.png" alt="Price Comparison App - Store Selection" class="bento-project-img" />
 		<p><strong>Store Selection:</strong> Allows users to choose preferred stores for price comparison.</p>
 	</div>
 	<div class="uiux-item">
-		<img src="/assets/img/projects/UI/users_cmgb13uge00w9sj014jrv7djf_aYBjY6GS3T5XoLs6-Group%207.png" alt="Price Comparison App - Comparison View" class="bento-project-img" />
+		<img src="/assets/img/projects/UI/207.png" alt="Price Comparison App - Comparison View" class="bento-project-img" />
 		<p><strong>Comparison View:</strong> Highlights price differences and savings across stores.</p>
 	</div>
 	<div class="uiux-item">
-		<img src="/assets/img/projects/UI/users_cmgb13uge00w9sj014jrv7djf_l9d6vb8I3YvHWvml-Group%203.png" alt="Price Comparison App - Cart" class="bento-project-img" />
+		<img src="/assets/img/projects/UI/203.png" alt="Price Comparison App - Cart" class="bento-project-img" />
 		<p><strong>Cart:</strong> Users can add items to their cart and view total costs from each store.</p>
 	</div>
 	<div class="uiux-item">
-		<img src="/assets/img/projects/UI/users_cmgb13uge00w9sj014jrv7djf_zvAfs7J4UiUMkN4J-Group%206.png" alt="Price Comparison App - Checkout" class="bento-project-img" />
+		<img src="/assets/img/projects/UI/206.png" alt="Price Comparison App - Checkout" class="bento-project-img" />
 		<p><strong>Checkout:</strong> Streamlined checkout process with a summary of savings.</p>
 	</div>
 </div>
