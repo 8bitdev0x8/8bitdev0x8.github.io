@@ -1,0 +1,12 @@
+.projects-search { margin: 1.5rem 0; }
+.search-box { width: 100%; max-width: 640px; padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid #dcdcdc; font-size: 1rem; }
+.tags-row { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-chip { background: #f2f2f2; border: 0; padding: 0.3rem 0.6rem; border-radius: 999px; cursor: pointer; font-size: 0.9rem; }
+.tag-chip.small { font-size: 0.8rem; padding: 0.2rem 0.5rem; }
+.tag-chip.active { background: #fefbab; color: #000000; }
+.projects-results { margin-top: 1rem; display: grid; gap: 1rem; }
+.project-item { padding: 0.75rem; border-radius: 6px; border: 1px solid #eee; }
+.project-title { font-weight: 600; color: inherit; text-decoration: none; }
+.project-excerpt { margin: 0.4rem 0 0; color: #555; }
+.project-tags { margin-top: 0.5rem; display:flex; gap:0.4rem; flex-wrap:wrap; }
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }

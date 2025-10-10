@@ -28,4 +28,17 @@
       ? area.classList.add("blurry")
       : area.classList.remove("blurry");
   });
+
+  // Load projects search script only on the projects page
+  try {
+    const path = window.location.pathname || '';
+    if (path.indexOf('/projects') !== -1) {
+      const s = document.createElement('script');
+      s.src = '/assets/js/projects-search.js';
+      s.defer = true;
+      document.body.appendChild(s);
+    }
+  } catch (e) {
+    // ignore
+  }
 })();

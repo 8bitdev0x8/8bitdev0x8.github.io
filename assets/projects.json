@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Li-Fi (Light Fidelity)",
+    "url": "/projects/#li-fi-light-fidelity",
+    "excerpt": "Wireless communication using LED light. Faster and more secure than Wi-Fi.",
+    "tags": ["communication", "hardware", "optical"]
+  },
+  {
+    "title": "SerialPilot",
+    "url": "/projects/#serialpilot",
+    "excerpt": "RC vehicle controlled via serial interface using UART commands.",
+    "tags": ["robotics", "embedded", "serial"]
+  },
+  {
+    "title": "Bellarom",
+    "url": "/projects/#bellarom",
+    "excerpt": "Short film project with embedded media and storytelling.",
+    "tags": ["film", "video", "creative"]
+  },
+  {
+    "title": "Logo Design (Elixtra)",
+    "url": "/projects/#logo-design",
+    "excerpt": "Branding and logo design created in Adobe Illustrator — adaptable for web and print.",
+    "tags": ["design", "branding", "vector"]
+  },
+  {
+    "title": "IR Module v1",
+    "url": "/projects/#ir-module-v1",
+    "excerpt": "CAD design and renders for an infrared module (IR Module v1).",
+    "tags": ["cad", "hardware", "design", "3d"]
+  },
+  {
+    "title": "Price Comparison App UI Prototype",
+    "url": "/projects/#price-comparison-app-ui-prototype",
+    "excerpt": "UI prototype focused on grocery price comparison, product listings and store comparisons.",
+    "tags": ["ui/ux", "prototype", "mobile", "design"]
+  },
+  {
+    "title": "GoMend UI Design & Prototype",
+    "url": "/projects/#gomend-ui-design-and-prototype",
+    "excerpt": "User interface design and prototype demonstrating accessibility and usability improvements.",
+    "tags": ["ui/ux", "prototype", "usability"]
+  },
+  {
+    "title": "Mood Tax",
+    "url": "/projects/#mood-tax",
+    "excerpt": "A dystopian UI design project exploring 'emotional debt'—master's project prototype.",
+    "tags": ["ui/ux", "speculative", "design"]
+  },
+  {
+    "title": "Virtual Forklift (AR Collision Detection)",
+    "url": "/projects/#virtual-forklift",
+    "excerpt": "1:1 augmented reality prototype to visualize forklift movement and detect potential collisions.",
+    "tags": ["ar", "simulation", "safety", "vr"]
+  },
+  {
+    "title": "Digital Twin – IoT MQTT Server",
+    "url": "/projects/#digital-twin-iot-mqtt-server",
+    "excerpt": "An MQTT-based IoT server used to feed and manage digital twin data streams.",
+    "tags": ["iot", "mqtt", "digital-twin", "server"]
+  },
+  {
+    "title": "SFO Airport Digital Twin – TwinVerse Platform",
+    "url": "/projects/#sfo-airport-digital-twin",
+    "excerpt": "Digital twin implementation of SFO using TwinVerse for real-time simulation and analytics.",
+    "tags": ["digital-twin", "iot", "simulation", "twinverse"]
+  },
+  {
+    "title": "VR Soldering Training Simulator",
+    "url": "/projects/#vr-soldering-training-simulator",
+    "excerpt": "A VR training simulator designed to teach soldering procedures in an immersive environment.",
+    "tags": ["vr", "training", "simulation", "education"]
+  },
+  {
+    "title": "Abu Dhabi Digital Twin",
+    "url": "/projects/#abu-dhabi-digital-twin",
+    "excerpt": "Contributions to a full-scale digital twin of Abu Dhabi, including BIM integration and enhanced rendering.",
+    "tags": ["digital-twin", "bim", "unreal", "visualization"]
+  }
+]
