@@ -43,7 +43,7 @@
   },
   {
     "title": "Mood Tax",
-    "url": "/projects/#mood-tax",
+    "url": "/projects/#mood-tax-a-dystopian-ui-design-on-emotional-debt",
     "excerpt": "A dystopian UI design project exploring 'emotional debt'—master's project prototype.",
     "tags": ["ui/ux", "speculative", "design"]
   },
@@ -61,7 +61,7 @@
   },
   {
     "title": "SFO Airport Digital Twin – TwinVerse Platform",
-    "url": "/projects/#sfo-airport-digital-twin",
+    "url": "/projects/#sfo-airport-digital-twin--twinverse-platform",
     "excerpt": "Digital twin implementation of SFO using TwinVerse for real-time simulation and analytics.",
     "tags": ["digital-twin", "iot", "simulation", "twinverse"]
   },

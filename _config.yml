@@ -1,5 +1,5 @@
 # Site settings
-title: 8bitdev0x8 blogs # site title
+title: 8bitdev0x8  # site title
 description: >- # site description
   blog for open-source enthusiast.
 lang: en-US # default lang
@@ -17,7 +17,7 @@ author:
   twitter: twitter_username # twitter username
   facebook: facebook_username # facebook username
   email: 8bitdev0x8@gmail.com # email adress
-  avatar: /assets/img/jekyll/batman.png # change with your own avatar
+  avatar: /assets/img/jekyll/rdr2.jpg # change with your own avatar
 
 # URL settings
 url: "https://github.com/8bitdev0x8" #

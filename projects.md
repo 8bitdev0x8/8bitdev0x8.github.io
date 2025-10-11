@@ -140,7 +140,7 @@ This master's project explores the concept of "emotional debt" through a dystopi
 	<iframe src="https://www.youtube.com/embed/qhgiZpLOff4" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-### Virtual Forklift – AR Collision Detection Prototype
+## Virtual Forklift – AR Collision Detection Prototype
 
 Virtual Forklift is a 1:1 scale augmented reality prototype designed to visualize and test forklift movement within real-world environments. Using AR and 3D mesh scanning, the prototype detects potential collisions by mapping physical surroundings and overlaying a life-sized virtual forklift model in real time.
 
@@ -151,7 +151,9 @@ Virtual Forklift is a 1:1 scale augmented reality prototype designed to visualiz
 ```
 </div>
 
-[Digital Twin – IoT MQTT Server (YouTube)](https://youtu.be/v_VExQuljdg)
+## Digital Twin | IoT MQTT Server ##
+
+[Digital Twin - IoT MQTT Server (YouTube)](https://youtu.be/v_VExQuljdg)
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
 	<iframe src="https://www.youtube.com/embed/v_VExQuljdg" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
