@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Building a CHIP-8 Emulator: My Journey Into Computer Architecture",
+      "tags"     : "",
+      "url"      : "/chip8_emulator_blog/",
+      "date"     : "2025-10-26 10:00:00 +0000"
+    } ,
+  
+    {
       "title"    : "Welcome to My Blog",
       "tags"     : "",
       "url"      : "/welcome-to-my-blog/",
