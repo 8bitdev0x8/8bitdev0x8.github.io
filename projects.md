@@ -1,42 +1,27 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 ---
 
+> “People who are really serious about software should make their own hardware.”  
+> — Alan Kay
 
 Welcome to the My Work section! This is where I share my projects, side work, and the things I’ve been creating and exploring.
 
 
-> “People who are really serious about software should make their own hardware.”  
-> — Alan Kay
-
-<!-- Projects search UI -->
-<link rel="stylesheet" href="/assets/css/projects.css" />
-<div id="projects-search" class="projects-search">
-	<label for="projects-query" class="visually-hidden">Search projects</label>
-	<input id="projects-query" class="search-box" type="search" placeholder="Search projects, descriptions, or tags" aria-label="Search projects" />
-	<div id="projects-tags" class="tags-row" aria-hidden="false"></div>
-	<div id="projects-results" class="projects-results" aria-live="polite"></div>
-</div>
-
----
-
-
-<!-- ## Projects Table
-
-| Project Name   | Description                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------------|
-| [Li-Fi](#li-fi-light-fidelity)         | Wireless communication using LED light. Faster and more secure than Wi-Fi, ideal for hospitals.   |
-| [SerialPilot](#serialpilot)   | RC vehicle controlled via serial interface. Explore UART-based control systems.                   |
-| [Bellarom](#bellarom)      | Short film project.                                                                               | -->
 
 
 
-## Featured Projects
+## Jump to a project
 
+<ul class="projects-nav">
+{% for p in site.data.projects %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
 
-### Li-Fi (Light Fidelity)
+<h3 id="li-fi-light-fidelity">Li-Fi (Light Fidelity)</h3>
 Li-Fi is a wireless communication technology that uses LED light instead of radio waves to transmit data. It offers much faster speeds than Wi-Fi, is more secure since light cannot pass through walls, and is ideal for use in places like hospitals and airplanes. However, it requires line of sight and only works where light is available, making it less flexible than Wi-Fi.
 
 
@@ -44,14 +29,14 @@ Li-Fi is a wireless communication technology that uses LED light instead of radi
 
 ---
 
-### SerialPilot
+<h3 id="serialpilot">SerialPilot</h3>
 SerialPilot is an RC vehicle controlled through a serial communication interface, allowing commands to be sent from a computer or microcontroller directly to the RC system. It demonstrates how data transmitted over UART can be used to steer, accelerate, and manage remote-controlled vehicles, offering a simple yet effective way to explore serial-based control systems.
 
 
 <img src="/assets/img/projects/HARDWARE/users_cmgb13uge00w9sj014jrv7djf_PMJ2hgmSpPle8FiQ-20150929_133900.jpg" alt="SerialPilot" class="bento-project-img" />
 
 ---
-## Logo Design ##
+<h3 id="logo-design">Logo Design</h3>
 Elixtra logo was designed as part of a branding project using Adobe Illustrator. The design process focused on creating a versatile and modern visual identity that could be adapted for various color schemes and backgrounds. The logo reflects a clean, professional aesthetic suitable for both digital and print applications.
 <div class="logo-gallery">
 	<img src="/assets/img/projects/DESIGN/XL-Black@4x-100.jpg" alt="XL-Black" class="bento-project-img" />
@@ -60,9 +45,9 @@ Elixtra logo was designed as part of a branding project using Adobe Illustrator.
 	<img src="/assets/img/projects/DESIGN/XL-White@4x-100.jpg" alt="XL-White" class="bento-project-img" />
 </div>
 
-## CAD Design ##
+<h3 id="cad-design">CAD Design</h3>
 
-## IR Module v1
+<h3 id="ir-module-v1">IR Module v1</h3>
 
 <div class="ir-module-gallery">
 	<img src="/assets/img/projects/CAD/Ir%20module%20v1%20front.png" alt="IR Module v1 Front" class="bento-project-img" />
@@ -93,7 +78,7 @@ Elixtra logo was designed as part of a branding project using Adobe Illustrator.
 	</div>
 </div>
 
-### Price Comparison App UI Prototype
+<h3 id="price-comparison-app-ui-prototype">Price Comparison App UI Prototype</h3>
 
 This UI prototype was created as part of a master's project focused on developing a price comparison app for groceries. The design emphasizes user-friendly navigation, clear product listings, and intuitive comparison features to help users find the best deals across different stores.
 
@@ -120,7 +105,7 @@ This UI prototype was created as part of a master's project focused on developin
 	</div>
 </div>
 
-### GoMend UI Design and Prototype
+<h3 id="gomend-ui-design-and-prototype">GoMend UI Design and Prototype</h3>
 
 The GoMend UI design and prototype showcases a user-friendly interface focused on efficient navigation and intuitive interactions. Developed as part of a usability study, the design emphasizes clarity, accessibility, and modern aesthetics to enhance the user experience.
 
@@ -130,7 +115,7 @@ The GoMend UI design and prototype showcases a user-friendly interface focused o
 	<iframe src="https://www.youtube.com/embed/iIBwPSjvQzA" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-### Mood Tax: A Dystopian UI Design on Emotional Debt
+<h3 id="mood-tax-a-dystopian-ui-design-on-emotional-debt">Mood Tax: A Dystopian UI Design on Emotional Debt</h3>
 
 This master's project explores the concept of "emotional debt" through a dystopian UI/UX design prototype. The Mood Tax app visualizes how emotions could be quantified and taxed in a speculative future, challenging users to reflect on the intersection of technology, emotion, and societal control. The design focuses on immersive storytelling, impactful visuals, and intuitive interactions to convey the project's theme.
 
@@ -140,7 +125,7 @@ This master's project explores the concept of "emotional debt" through a dystopi
 	<iframe src="https://www.youtube.com/embed/qhgiZpLOff4" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## Virtual Forklift – AR Collision Detection Prototype
+## Virtual Forklift – AR Collision Detection Prototype{#virtual-forklift}
 
 Virtual Forklift is a 1:1 scale augmented reality prototype designed to visualize and test forklift movement within real-world environments. Using AR and 3D mesh scanning, the prototype detects potential collisions by mapping physical surroundings and overlaying a life-sized virtual forklift model in real time.
 
@@ -151,7 +136,7 @@ Virtual Forklift is a 1:1 scale augmented reality prototype designed to visualiz
 ```
 </div>
 
-## Digital Twin | IoT MQTT Server ##
+<h2 id="digital-twin-iot-mqtt-server">Digital Twin | IoT MQTT Server</h2>
 
 [Digital Twin - IoT MQTT Server (YouTube)](https://youtu.be/v_VExQuljdg)
 
@@ -159,7 +144,7 @@ Virtual Forklift is a 1:1 scale augmented reality prototype designed to visualiz
 	<iframe src="https://www.youtube.com/embed/v_VExQuljdg" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-### SFO Airport Digital Twin – TwinVerse Platform
+<h3 id="sfo-airport-digital-twin--twinverse-platform">SFO Airport Digital Twin – TwinVerse Platform</h3>
 
 This project implements a digital twin of San Francisco International Airport (SFO) using the TwinVerse platform by Travancore Analytics. The system creates a virtual replica of airport operations, integrating live data from sensors, IoT devices, and infrastructure systems via MQTT and other protocols. This enables real-time simulation, analysis, and optimization of workflows, supporting improved decision-making and operational efficiency.
 
@@ -171,7 +156,7 @@ This project implements a digital twin of San Francisco International Airport (S
 	<iframe src="https://www.youtube.com/embed/f47Q37g1FGo" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-### VR Soldering Training Simulator
+<h3 id="vr-soldering-training-simulator">VR Soldering Training Simulator</h3>
 
 This VR training simulator was developed as part of a master's Virtual Reality module. It is designed to teach users the procedures and best practices of soldering in an immersive, interactive environment. The simulator guides learners through step-by-step instructions, helping them gain hands-on experience with soldering techniques in a safe, virtual setting.
 
@@ -183,7 +168,7 @@ This VR training simulator was developed as part of a master's Virtual Reality m
 </div>
 
 
-### Abu Dhabi Digital Twin
+<h3 id="abu-dhabi-digital-twin">Abu Dhabi Digital Twin</h3>
 
 This project involved contributing to a full-scale digital twin of Abu Dhabi, integrating Building Information Modeling (BIM) data, optimizing system performance, and implementing advanced features such as sector selection and enhanced rendering. The platform enables real-time exploration of the city using Unreal Engine and pixel streaming, supporting collaborative planning and informed design decision-making.
 
@@ -195,7 +180,7 @@ This project involved contributing to a full-scale digital twin of Abu Dhabi, in
 
 
 
-### Bellarom
+<h3 id="bellarom">Bellarom</h3>
 
 [Bellarom (Vimeo)](https://vimeo.com/1035192003/287bfb8b74)
 

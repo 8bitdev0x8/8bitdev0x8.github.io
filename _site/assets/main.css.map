@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "style.css",
+	"file": "main.css",
 	"sources": [
-		"style.scss",
+		"main.scss",
 		"_sass/main.scss",
 		"_sass/constants.scss",
 		"_sass/typography.scss",
@@ -11,7 +11,7 @@
 		"_sass/common.scss"
 	],
 	"sourcesContent": [
-		"@import \"main\";\n",
+		"@import 'main';",
 		"@import 'constants';\r\n@import 'typography';\r\n@import 'darkmode';\r\n@import 'syntax-highlighter';\r\n@import 'common';\r\n",
 		":root {\r\n  --color__gray--light: rgb(191, 191, 191);\r\n  --color__gray--dark: rgb(26, 26, 26);\r\n}\r\n",
 		"/* open-sans-regular - latin */\r\n@font-face {\r\n  font-family: 'Open Sans';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-display: swap;\r\n  src: local('Open Sans Regular'), local('OpenSans-Regular'),\r\n  url('./fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */\r\n  url('./fonts/open-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */\r\n}\r\n\r\n:root {\r\n  --typography__default: 'Open Sans', sans-serif;\r\n}\r\n",

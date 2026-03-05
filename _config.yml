@@ -5,7 +5,6 @@ description: >- # site description
 lang: en-US # default lang
 timezone: Asia/Kolkata # set your timezone
 repo: https://github.com/8bitdev0x8 # site repo [optional]
-mode: light # default theme "dark" | "light"
 
 # Profile settings
 author:
@@ -29,21 +28,28 @@ fb_appid:
 # Collection setting
 collections:
   posts:
+    title: Blog
+    default_open: true
     output: true
 
 # Markdown settings
 markdown: kramdown
 highlighter: rouge
+javascript_enabled: true
 kramdown:
   syntax_highlighter: rouge
+  auto_ids: false
+
+sass:
+  style: compressed
 
 # Default front matter
 defaults:
   - scope:
-      path: ""
+      type: posts
     values:
-      layout: post
-      comments: false
+      title: Essays
+      permalink: /post/:title
 
 # Jekyll Compose default front matter
 jekyll_compose:
@@ -60,9 +66,6 @@ jekyll_compose:
 number_of_posts: 5
 
 # Build settings
-# theme: klise
-sass:
-  style: compressed
 
 include:
   - _redirects
@@ -80,6 +83,7 @@ exclude:
 
 # Plugins
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
