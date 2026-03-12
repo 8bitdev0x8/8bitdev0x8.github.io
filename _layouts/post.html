@@ -11,11 +11,7 @@ layout: default
   <header class="title-tags">
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B, %Y. It was a %A.' }}</time>
     <div class="tags-container">
-      Posted under <span>
-          {% for tag in page.tags %}
-            <a class="tags" href="/tags#{{ tag }}">{{ tag }}</a>
-          {% endfor %}
-        </span>
+      Posted under <span>{{ site.author.name }}</span>
       &nbsp;
     </div>
   </header>
