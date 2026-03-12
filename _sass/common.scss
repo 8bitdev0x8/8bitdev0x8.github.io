@@ -324,6 +324,137 @@ table {
   margin: 1rem 0;
 }
 
+.quote-box {
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin: 0.8rem 0 1.2rem;
+  background: #fafafa;
+}
+
+.quote-text {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.quote-author {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.projects-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.projects-index-group {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  background: #fafafa;
+}
+
+.projects-index-group h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.projects-index-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-index-group li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0.2rem 0;
+}
+
+.repo-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.repo-icon-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.repo-icon-link:hover {
+  opacity: 1;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.project-block {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.5rem 0 1.4rem;
+  margin: 0.5rem 0 1.1rem;
+}
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.bento-project-img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.uiux-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.uiux-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 0.6rem;
+  background: #fff;
+}
+
+.uiux-item p {
+  margin: 0.6rem 0 0;
+  font-size: 1rem;
+}
+
+.projects-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 0.75rem;
+}
+
+.projects-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 // media queries
 @media screen and (max-width: 700px) {
   body {

@@ -47,4 +47,26 @@ body.dark  {
   #_progress {
     background: linear-gradient(to right, rgb(204, 204, 204) var(--scroll), transparent 0);
   }
+
+  .projects-index-group,
+  .uiux-item {
+    background: rgb(34, 34, 34);
+    border-color: rgb(70, 70, 70);
+  }
+
+  .quote-box {
+    background: rgb(34, 34, 34);
+    border-color: rgb(70, 70, 70);
+  }
+
+  .quote-text {
+    color: var(--color__gray--light);
+    border-left: none;
+    padding: 0;
+  }
+
+  .project-block,
+  .bento-project-img {
+    border-color: rgb(70, 70, 70);
+  }
 }
