@@ -455,6 +455,33 @@ table {
   height: 100%;
 }
 
+.scroll-top-link {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(250, 250, 250, 0.42);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: rgba(51, 51, 51, 0.82);
+  text-decoration: none;
+  font-size: 1.35rem;
+  line-height: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  z-index: 50;
+}
+
+.scroll-top-link:hover {
+  background: #333;
+  color: #fff;
+}
+
 // media queries
 @media screen and (max-width: 700px) {
   body {

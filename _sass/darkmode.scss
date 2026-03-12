@@ -69,4 +69,16 @@ body.dark  {
   .bento-project-img {
     border-color: rgb(70, 70, 70);
   }
+
+  .scroll-top-link {
+    background: rgba(34, 34, 34, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    color: rgba(191, 191, 191, 0.82);
+  }
+
+  .scroll-top-link:hover {
+    background: var(--color__gray--light);
+    color: var(--color__gray--dark);
+  }
 }

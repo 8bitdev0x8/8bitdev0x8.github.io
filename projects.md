@@ -4,6 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
+<div id="top"></div>
+
 <div class="quote-box">
 	<p class="quote-text">"People who are really serious about software should make their own hardware."</p>
 	<p class="quote-author">Alan Kay</p>
@@ -310,6 +312,8 @@ permalink: /projects/
 - Digital Twin
 - Laser Cutting
 - Light Baking
+
+<a class="scroll-top-link" href="#top" aria-label="Scroll to top">&#8593;</a>
 
 
 
