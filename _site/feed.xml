@@ -1,4 +1,290 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2026-03-12T20:45:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">8bitdev0x8</title><subtitle>blog for open-source enthusiast.</subtitle><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><entry><title type="html">Building a CHIP-8 Emulator: My Journey Into Computer Architecture</title><link href="http://localhost:4000/post/chip8_emulator_blog" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator: My Journey Into Computer Architecture" /><published>2025-10-26T10:00:00+00:00</published><updated>2025-10-26T10:00:00+00:00</updated><id>http://localhost:4000/post/chip8_emulator_blog</id><content type="html" xml:base="http://localhost:4000/post/chip8_emulator_blog"><![CDATA[<p>This has been a long-term idea in my mind. Ever since I started using a computer in my childhood, I’ve always wondered: <strong>how could I build a computer from scratch?</strong> And yes, I literally mean from scratch—using bare transistor circuits.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2026-03-13T00:28:33+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">8bitdev0x8</title><subtitle>blog for open-source enthusiast.</subtitle><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><entry><title type="html">Building a CHIP-8 Emulator in C++ - Part 2</title><link href="http://localhost:4000/post/building-a-chip8-emulator-part-2" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator in C++ - Part 2" /><published>2026-03-12T10:00:00+00:00</published><updated>2026-03-12T10:00:00+00:00</updated><id>http://localhost:4000/post/building-a-chip8-emulator-part-2</id><content type="html" xml:base="http://localhost:4000/post/building-a-chip8-emulator-part-2"><![CDATA[<h2>Rendering the Display with Dear ImGui and GLFW</h2>
+
+<p>In the first part of this series, I introduced the CHIP-8 architecture and the motivation behind building an emulator.</p>
+
+<p>If you have not read the first post, you can find it here:</p>
+
+<p><strong>Part 1:</strong><br />
+<a href="https://jojysaju.dev/post/chip8_emulator_blog">https://jojysaju.dev/post/chip8_emulator_blog</a></p>
+
+<p>In this post, I will walk through the next step of the project: creating the application window, rendering the CHIP-8 screen, and setting up the main emulator loop.</p>
+
+<p>The source code for this project is available here:</p>
+
+<p><a href="https://github.com/8bitdev0x8/Chip8">https://github.com/8bitdev0x8/Chip8</a></p>
+
+<hr />
+
+<h2>Why I Chose C++</h2>
+
+<p>One of the first decisions I made when starting this project was choosing the programming language.</p>
+
+<p>I chose <strong>C++</strong> for a few important reasons.</p>
+
+<h3>Portability</h3>
+
+<p>My long-term goal is to eventually run this emulator on <strong>hardware platforms</strong>. C++ is portable and can be compiled across different operating systems and architectures.</p>
+
+<h3>Performance</h3>
+
+<p>Emulation requires simulating CPU instructions in real time. C++ provides low-level control over memory and execution speed, which is useful when building an emulator.</p>
+
+<hr />
+
+<h2>Creating the Project</h2>
+
+<p>The first step was creating a new project in <strong>Visual Studio</strong>.</p>
+
+<p>I created a <strong>Windows C++ Blank Project</strong>. This allows full control over dependencies and project structure.</p>
+
+<p>For now, the emulator is implemented mostly in a single file: <strong><code class="language-plaintext highlighter-rouge">main.cpp</code></strong>.</p>
+
+<p>This file contains:</p>
+
+<ul>
+  <li>window initialization</li>
+  <li>Dear ImGui setup</li>
+  <li>emulator execution loop</li>
+  <li>display rendering</li>
+</ul>
+
+<p><img src="/assets/img/jekyll/chip8-part2/project-set-up-screen.png" alt="CHIP-8 project setup screenshot" /></p>
+
+<p><em>Project setup snapshot from the initial build phase in Visual Studio.</em></p>
+
+<hr />
+
+<h2>The CHIP-8 Display</h2>
+
+<p>The original CHIP-8 system used a <strong>64 x 32 monochrome display</strong>.</p>
+
+<p>The screen coordinates look like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(0,0) ------------------ (63,0)
+|                         |
+|                         |
+|                         |
+(0,31) ----------------- (63,31)
+</code></pre></div></div>
+
+<p>Each pixel is either:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">0</code> = off</li>
+  <li><code class="language-plaintext highlighter-rouge">1</code> = on</li>
+</ul>
+
+<p>Inside the emulator, this is usually stored as a <strong>framebuffer</strong>.</p>
+
+<p>Example:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">display</span><span class="p">[</span><span class="mi">64</span> <span class="o">*</span> <span class="mi">32</span><span class="p">];</span>
+</code></pre></div></div>
+<p>Whenever the CHIP-8 CPU executes a draw instruction (<code class="language-plaintext highlighter-rouge">DXYN</code>), the framebuffer is updated.</p>
+
+<p>The renderer then draws this framebuffer to the screen.</p>
+
+<p><img src="/assets/img/jekyll/chip8-part2/08-space-invaders-screen.png" alt="Space Invaders rendered on CHIP-8 screen" /></p>
+
+<p><em>Space Invaders drawn to the screen from the framebuffer.</em></p>
+
+<hr />
+
+<h2>Choosing a Rendering Library</h2>
+
+<p>To render the CHIP-8 display, I needed a simple graphics library.</p>
+
+<p>While exploring options, I came across the Dear ImGui project:</p>
+
+<p><a href="https://github.com/ocornut/imgui">https://github.com/ocornut/imgui</a></p>
+
+<p>Dear ImGui describes itself as:</p>
+
+<p>“Bloat-free graphical user interface for C++ with minimal dependencies”</p>
+
+<p>This made it an excellent choice for this project.</p>
+
+<h3>Why Dear ImGui?</h3>
+
+<ul>
+  <li>lightweight</li>
+  <li>simple integration</li>
+  <li>minimal dependencies</li>
+  <li>easy rendering APIs</li>
+  <li>built-in debugging UI</li>
+</ul>
+
+<p>Another advantage is that Dear ImGui provides higher-level rendering primitives, which means I do not need to directly implement OpenGL rendering logic.</p>
+
+<hr />
+
+<h2>Creating the Window with GLFW</h2>
+
+<p>To create the application window and manage input events, I used GLFW:</p>
+
+<p><a href="https://www.glfw.org/">https://www.glfw.org/</a></p>
+
+<p>GLFW is responsible for:</p>
+
+<ul>
+  <li>creating the application window</li>
+  <li>handling input</li>
+  <li>managing the graphics context</li>
+</ul>
+
+<p>The initialization starts with:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">glfwInit</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Then creating the window:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span> <span class="o">=</span> <span class="n">glfwCreateWindow</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="s">"CHIP-8 Debugger"</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Then the context is activated:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Once the window is created, Dear ImGui can be initialized using the GLFW backend.</p>
+
+<hr />
+
+<h2>Integrating Dear ImGui</h2>
+
+<p>After creating the window, Dear ImGui is initialized.</p>
+
+<p>This allows us to draw UI elements and custom graphics inside the window.</p>
+
+<p>Typical setup includes:</p>
+
+<ul>
+  <li>creating an ImGui context</li>
+  <li>initializing the GLFW backend</li>
+  <li>starting a new ImGui frame each loop</li>
+</ul>
+
+<p>Example structure:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ImGui</span><span class="o">::</span><span class="n">NewFrame</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>At the end of the frame:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ImGui</span><span class="o">::</span><span class="n">Render</span><span class="p">();</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2>Rendering the CHIP-8 Framebuffer</h2>
+
+<p>The CHIP-8 resolution (<code class="language-plaintext highlighter-rouge">64x32</code>) is very small compared to modern displays.</p>
+
+<p>To make the display visible, each pixel must be scaled up.</p>
+
+<p>Example scaling:</p>
+
+<ul>
+  <li>Pixel size = <code class="language-plaintext highlighter-rouge">10</code></li>
+  <li><code class="language-plaintext highlighter-rouge">64 * 10 = 640</code> pixels width</li>
+  <li><code class="language-plaintext highlighter-rouge">32 * 10 = 320</code> pixels height</li>
+</ul>
+
+<p>Each CHIP-8 pixel is rendered as a small rectangle.</p>
+
+<p>Pseudo code:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">64</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">display</span><span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">64</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Using Dear ImGui’s DrawList API, rectangles can be drawn easily.</p>
+
+<p>This makes it straightforward to render the framebuffer.</p>
+
+<hr />
+
+<h2>The Emulator Main Loop</h2>
+
+<p>Once everything is initialized, the emulator enters the main loop.</p>
+
+<p>This loop runs until the window is closed.</p>
+
+<p>Example structure:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">glfwWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">emulateCycle</span><span class="p">();</span>
+    <span class="n">renderFrame</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Inside the loop:</p>
+
+<ul>
+  <li>process window events</li>
+  <li>execute emulator CPU cycles</li>
+  <li>render the display</li>
+  <li>update the UI</li>
+</ul>
+
+<p>This loop keeps the emulator running continuously.</p>
+
+<hr />
+
+<h2>Controlling Execution Speed</h2>
+
+<p>An important part of emulation is timing.</p>
+
+<p>The emulator must not run too fast or too slow.</p>
+
+<p>To maintain correct behavior:</p>
+
+<ul>
+  <li>the CPU executes a fixed number of cycles</li>
+  <li>timers update at fixed intervals</li>
+  <li>the renderer updates every frame</li>
+</ul>
+
+<p>This allows the emulator to behave close to the original system.</p>
+
+<p><img src="/assets/img/jekyll/chip8-part2/06-debugger-registers-panel.png" alt="Disassembly panel with current instruction" /></p>
+
+<p><em>Live debugger controls for timing and execution: run/step/step-back/reset, adjustable clock target (Hz), and register snapshots (<code class="language-plaintext highlighter-rouge">I</code>, <code class="language-plaintext highlighter-rouge">PC</code>, <code class="language-plaintext highlighter-rouge">SP</code>, <code class="language-plaintext highlighter-rouge">V0-VF</code>).</em></p>
+
+<hr />
+
+<h2>Source Code</h2>
+
+<p>Full project source code:</p>
+
+<p><a href="https://github.com/8bitdev0x8/Chip8">https://github.com/8bitdev0x8/Chip8</a></p>
+
+<hr />
+
+<h2>Conclusion</h2>
+
+<p>In this part of the project, I focused on building the platform layer of the emulator.</p>
+
+<p>This includes:</p>
+
+<ul>
+  <li>creating a window with GLFW</li>
+  <li>integrating Dear ImGui</li>
+  <li>rendering the CHIP-8 framebuffer</li>
+  <li>building the main emulator loop</li>
+</ul>
+
+<p>In the next part, I will explore the CPU implementation, including how CHIP-8 instructions are decoded and executed.</p>]]></content><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Rendering the Display with Dear ImGui and GLFW]]></summary></entry><entry><title type="html">Building a CHIP-8 Emulator: My Journey Into Computer Architecture</title><link href="http://localhost:4000/post/chip8_emulator_blog" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator: My Journey Into Computer Architecture" /><published>2025-10-26T10:00:00+00:00</published><updated>2025-10-26T10:00:00+00:00</updated><id>http://localhost:4000/post/chip8_emulator_blog</id><content type="html" xml:base="http://localhost:4000/post/chip8_emulator_blog"><![CDATA[<p>This has been a long-term idea in my mind. Ever since I started using a computer in my childhood, I’ve always wondered: <strong>how could I build a computer from scratch?</strong> And yes, I literally mean from scratch—using bare transistor circuits.</p>
 
 <p>After a long period of thinking and planning, I have finally decided to take the plunge. To start, I chose a simple, beginner-friendly design as my entry into the fascinating world of computer architecture.</p>
 

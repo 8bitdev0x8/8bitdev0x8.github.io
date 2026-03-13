@@ -16,9 +16,21 @@ body.dark  {
     border-left: 5px solid var(--color__gray--light);
     color: var(--color__gray--light)
   }
-  code, pre {
+  code {
     color: var(--color__gray--dark);
-    font-family: var(--typography__default);
+    font-family: monospace, monospace;
+  }
+  pre {
+    color: var(--color__gray--light);
+    font-family: monospace, monospace;
+  }
+  pre code {
+    color: var(--color__gray--light);
+  }
+  .highlight,
+  .highlight pre,
+  .highlight code {
+    color: #f8f8f2;
   }
   .tags {
     background-color: var(--color__gray--light);
