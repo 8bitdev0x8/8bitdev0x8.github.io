@@ -84,6 +84,22 @@ permalink: /projects/
 			{% endfor %}
 		</ul>
 	</section>
+
+	<section class="projects-index-group">
+		<h4>Software and Tools</h4>
+		<ul>
+			{% for p in site.data.projects %}
+				{% if p.category == "software" %}
+					<li class="repo-link-item">
+						<a href="{{ p.url }}">{{ p.title }}</a>
+						{% if p.github %}
+							<a class="repo-icon-link" href="{{ p.github }}" target="_blank" rel="noopener" aria-label="{{ p.title }} GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+						{% endif %}
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</section>
 </div>
 
 ## Hardware and Embedded
@@ -91,12 +107,14 @@ permalink: /projects/
 <section class="project-block">
 	{% assign li_fi_project = site.data.projects | where: "url", "/projects/#li-fi-light-fidelity" | first %}
 	<h3 id="li-fi-light-fidelity" class="project-title-row">Li-Fi (Light Fidelity)
-		{% if li_fi_project.github %}
-			<a class="repo-icon-link" href="{{ li_fi_project.github }}" target="_blank" rel="noopener" aria-label="Li-Fi (Light Fidelity) GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
-		{% endif %}
 	</h3>
 	<p>Li-Fi is a wireless communication technology that uses LED light instead of radio waves to transmit data. It offers much faster speeds than Wi-Fi, improved security since light cannot pass through walls, and is useful in environments like hospitals and airplanes.</p>
-	<img src="/assets/img/projects/HARDWARE/users_cmgb13uge00w9sj014jrv7djf_LgY4emHp2qN9n1tw-IMG_0485.jpg" alt="Li-Fi Project" class="bento-project-img" />
+	<div class="project-gallery-grid">
+		<div class="project-img-sm">
+			<img src="/assets/img/projects/HARDWARE/users_cmgb13uge00w9sj014jrv7djf_LgY4emHp2qN9n1tw-IMG_0485.jpg" alt="Li-Fi Project" class="bento-project-img" />
+		</div>
+		<img src="/assets/img/projects/HARDWARE/LIFI.jpg" alt="Li-Fi diagram" class="bento-project-img" />
+	</div>
 </section>
 
 <section class="project-block">
@@ -108,6 +126,29 @@ permalink: /projects/
 	</h3>
 	<p>SerialPilot is an RC vehicle controlled through a serial interface. Commands are sent from a computer or microcontroller to steer and manage the vehicle over UART.</p>
 	<img src="/assets/img/projects/HARDWARE/users_cmgb13uge00w9sj014jrv7djf_PMJ2hgmSpPle8FiQ-20150929_133900.jpg" alt="SerialPilot" class="bento-project-img" />
+</section>
+
+<section class="project-block">
+	{% assign dualsense2serial_project = site.data.projects | where: "url", "/projects/#dualsense2serial" | first %}
+	<h3 id="dualsense2serial" class="project-title-row">DualSense2Serial
+		{% if dualsense2serial_project.github %}
+			<a class="repo-icon-link" href="{{ dualsense2serial_project.github }}" target="_blank" rel="noopener" aria-label="DualSense2Serial GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>DualSense2Serial is a bridge that converts input data from the Sony DualSense Wireless Controller into serial communication, allowing microcontrollers, robots, and custom hardware to be controlled using a PlayStation 5 controller.</p>
+	<img src="https://raw.githubusercontent.com/8bitdev0x8/DualSense2Serial/main/images/Duelsense2Serial.png" alt="DualSense2Serial README Screenshot" class="bento-project-img" />
+</section>
+
+<section class="project-block">
+	{% assign ps5_controller_visualizer_project = site.data.projects | where: "url", "/projects/#ps5-controller-visualizer" | first %}
+	<h3 id="ps5-controller-visualizer" class="project-title-row">PS5 DualSense Controller Visualizer
+		{% if ps5_controller_visualizer_project.github %}
+			<a class="repo-icon-link" href="{{ ps5_controller_visualizer_project.github }}" target="_blank" rel="noopener" aria-label="PS5 DualSense Controller Visualizer GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>Real-time, web-based PS5 DualSense controller visualizer that shows button presses, sticks, triggers, and touchpad input on screen. Perfect for adding a live controller overlay to your stream via OBS (browser source).</p>
+	<p><a href="https://jojysaju.dev/ps5-controller-visualizer/" target="_blank" rel="noopener">Live Demo</a></p>
+	<img src="https://jojysaju.dev/ps5-controller-visualizer/Images/PS5Controller.gif" alt="PS5 DualSense Controller Visualizer README GIF" class="bento-project-img" />
 </section>
 
 <section class="project-block">
@@ -210,6 +251,54 @@ permalink: /projects/
 ## AR/VR and Digital Twin
 
 <section class="project-block">
+	{% assign voxelmr_project = site.data.projects | where: "url", "/projects/#voxelmr" | first %}
+	<h3 id="voxelmr" class="project-title-row">VoxelMR
+		{% if voxelmr_project.github %}
+			<a class="repo-icon-link" href="{{ voxelmr_project.github }}" target="_blank" rel="noopener" aria-label="VoxelMR GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>Immersive Surgical Planning with Precision Stylus Interaction.</p>
+	<p><a href="https://www.logitech.com/en-eu/discover/devstudio/challenge" target="_blank" rel="noopener">Logitech MX Ink Challenge</a></p>
+	<p><a href="https://devpost.com/software/voxel-mr" target="_blank" rel="noopener">Project on Devpost</a></p>
+	<img src="https://raw.githubusercontent.com/8bitdev0x8/Voxel-MR/main/VoxelMR.png" alt="VoxelMR GitHub README image" class="bento-project-img" />
+</section>
+
+<section class="project-block">
+	{% assign stickyspace_project = site.data.projects | where: "url", "/projects/#stickyspace" | first %}
+	<h3 id="stickyspace" class="project-title-row">StickySpace
+		{% if stickyspace_project.github %}
+			<a class="repo-icon-link" href="{{ stickyspace_project.github }}" target="_blank" rel="noopener" aria-label="StickySpace GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>StickySpace lets you place virtual sticky notes on walls and surfaces in mixed reality, turning your surroundings into an interactive space for ideas.</p>
+	<p><strong>Created for:</strong> XRCC Hackathon 2025 &nbsp;|&nbsp; <strong>Built with:</strong> Unity (C#), Meta SDK &nbsp;|&nbsp; <strong>Tested on:</strong> Meta XR Simulator &nbsp;|&nbsp; <strong>Style:</strong> Rapid prototyping</p>
+	<p><a href="https://youtu.be/2yoNOJR6SPI" target="_blank" rel="noopener">Demo Video (YouTube)</a></p>
+	<div class="projects-embed">
+		<iframe src="https://www.youtube.com/embed/2yoNOJR6SPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div class="project-gallery-grid">
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/1.png" alt="StickySpace - Screenshot 1" class="bento-project-img" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/2.png" alt="StickySpace - Screenshot 2" class="bento-project-img" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/4.png" alt="StickySpace - Screenshot 3" class="bento-project-img" />
+	</div>
+</section>
+
+<section class="project-block">
+	{% assign air_project = site.data.projects | where: "url", "/projects/#air-augmented-interactive-reality" | first %}
+	<h3 id="air-augmented-interactive-reality" class="project-title-row">AIR – Augmented Interactive Reality
+		{% if air_project.github %}
+			<a class="repo-icon-link" href="{{ air_project.github }}" target="_blank" rel="noopener" aria-label="AIR GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>AIR is an Augmented Reality platform for designers, businesses, and users. It enhances natural environments with interactive digital overlays using AR cameras, object recognition, and smartphone applications. Our implementation focuses on interior design — giving users the ability to interactively arrange and visualise 3D furniture models in their real rooms through AR, bridging the gap between designers and clients.</p>
+	<div class="project-gallery-grid">
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/air.png" alt="AIR – App UI" class="bento-project-img" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/flowchart.png" alt="AIR – Flowchart" class="bento-project-img" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/renderviewer.png" alt="AIR – Render Viewer" class="bento-project-img" />
+	</div>
+</section>
+
+<section class="project-block">
 	{% assign virtual_forklift_project = site.data.projects | where: "url", "/projects/#virtual-forklift" | first %}
 	<h3 id="virtual-forklift" class="project-title-row">Virtual Forklift - AR Collision Detection Prototype
 		{% if virtual_forklift_project.github %}
@@ -295,6 +384,31 @@ permalink: /projects/
 	<div class="projects-embed">
 		<iframe src="https://player.vimeo.com/video/1035192003?h=287bfb8b74" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 	</div>
+</section>
+
+## Software and Tools
+
+<section class="project-block">
+	<h3 id="h264-video-streamer" class="project-title-row">H.264 Video Streamer &amp; Analytics Dashboard</h3>
+	<p>A custom C# H.264 video streamer that encodes and sends chunks over TCP while simulating real-world network conditions — packet loss, jitter, latency, and bandwidth limits. Paired with a React-based analytics dashboard featuring real-time metrics, timeline views, and visual insights into throughput, jitter, and overall stream health.</p>
+	<p>Understanding how video behaves under unstable or constrained networks is essential for products relying on high-fidelity, low-latency video — from remote rendering and digital twins to mobile 3D and interactive media tools.</p>
+	<div class="project-gallery-grid">
+		<img src="https://media.licdn.com/dms/image/v2/D5622AQE5eoU5l0240w/feedshare-shrink_2048_1536/B56ZrL37yXHkAw-/0/1764357030542?e=1775088000&v=beta&t=O95P-QZeXRqp1hf_b0-XeAaQMMz1LZlMq0Bd8Lhldco" alt="H.264 Streamer - Dashboard Overview" class="bento-project-img" />
+		<img src="https://media.licdn.com/dms/image/v2/D5622AQHzlZfatxvBCw/feedshare-shrink_1280/B56ZrL37yFIYAs-/0/1764357029705?e=1775088000&v=beta&t=ZC5CujOoFcjqmJA4ELPxDAZuPAOqz2Fgmrj9B8han7k" alt="H.264 Streamer - Metrics View" class="bento-project-img" />
+		<img src="https://media.licdn.com/dms/image/v2/D5622AQHb4C8kChWS-A/feedshare-shrink_1280/B56ZrL37yPJ8As-/0/1764357030578?e=1775088000&v=beta&t=Zw_cAq9V1NtYZ3mkKge-W04RVKbpYMMdX4rszHlPdXM" alt="H.264 Streamer - Timeline View" class="bento-project-img" />
+	</div>
+</section>
+
+<section class="project-block">
+	<h3 id="hafnia-video-event-analyzer" class="project-title-row">Hafnia Video Event Analyzer</h3>
+	<p>Selected as a finalist at the <strong>Milestone Developer Summit hackathon</strong> in Copenhagen, featured in Milestone Systems' official press release. The event brought together innovators from 15 countries building on Milestone's emerging Vision-Language Model powered by <strong>NVIDIA Cosmos-Reason</strong> and fine-tuned with domain-rich data from Project Hafnia.</p>
+	<p>The project used Hafnia's massive real-world video library and the VLM API to analyze video, generate semantic metadata, and enable advanced search and summarization — demonstrating how domain-specific VLMs can transform video understanding and build safer, smarter video intelligence.</p>
+	<p>
+		<a href="https://lnkd.in/gvMgZmbW" target="_blank" rel="noopener">Milestone Systems Press Release</a>
+		&nbsp;|&nbsp;
+		<a href="https://ne0-h3x.gitbook.io/hafnia-hackthon-2025" target="_blank" rel="noopener">Project Documentation</a>
+	</p>
+	<img src="https://media.licdn.com/dms/image/v2/D5622AQEiEEkDcYbzSA/feedshare-shrink_2048_1536/B56Zp.ytDuJ8A4-/0/1763063823917?e=1775088000&v=beta&t=YX2OQojUg-PrNyqbgbga2c4OirKcPSVls2LIEmN7BDY" alt="Hafnia Video Event Analyzer - Milestone Hackathon" class="bento-project-img" />
 </section>
 
 ## Skills and Technologies

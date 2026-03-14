@@ -386,7 +386,15 @@ table {
   display: inline-flex;
   align-items: center;
   line-height: 1;
+  flex: 0 0 auto;
   opacity: 0.85;
+}
+
+.repo-icon-link svg {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .repo-icon-link:hover {
@@ -396,6 +404,7 @@ table {
 .project-title-row {
   display: flex;
   align-items: center;
+  align-content: center;
   gap: 0.35rem;
   flex-wrap: wrap;
 }
@@ -417,6 +426,10 @@ table {
   width: 100%;
   border-radius: 6px;
   border: 1px solid #ddd;
+}
+
+.project-img-sm {
+  max-width: 360px;
 }
 
 .uiux-gallery {

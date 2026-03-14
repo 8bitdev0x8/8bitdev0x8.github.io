@@ -3,7 +3,6 @@
     "title": "Li-Fi (Light Fidelity)",
     "category": "hardware",
     "url": "/projects/#li-fi-light-fidelity",
-    "github": "https://github.com/8bitdev0x8/Voxel-MR",
     "excerpt": "Wireless communication using LED light. Faster and more secure than Wi-Fi.",
     "tags": ["communication", "hardware", "optical"]
   },
@@ -13,6 +12,22 @@
     "url": "/projects/#serialpilot",
     "excerpt": "RC vehicle controlled via serial interface using UART commands.",
     "tags": ["robotics", "embedded", "serial"]
+  },
+  {
+    "title": "DualSense2Serial",
+    "category": "hardware",
+    "url": "/projects/#dualsense2serial",
+    "github": "https://github.com/8bitdev0x8/DualSense2Serial",
+    "excerpt": "Bridge that converts Sony DualSense controller input into serial communication for microcontrollers, robots, and custom hardware.",
+    "tags": ["dualsense", "serial", "embedded", "robotics"]
+  },
+  {
+    "title": "PS5 DualSense Controller Visualizer",
+    "category": "hardware",
+    "url": "/projects/#ps5-controller-visualizer",
+    "github": "https://github.com/8bitdev0x8/ps5-controller-visualizer",
+    "excerpt": "Real-time, web-based PS5 DualSense controller visualizer for streams and OBS browser source overlays.",
+    "tags": ["dualsense", "obs", "visualizer", "web"]
   },
   {
     "title": "Bellarom",
@@ -57,6 +72,30 @@
     "tags": ["ui/ux", "speculative", "design"]
   },
   {
+    "title": "VoxelMR",
+    "category": "arvr",
+    "url": "/projects/#voxelmr",
+    "github": "https://github.com/8bitdev0x8/Voxel-MR",
+    "excerpt": "Immersive surgical planning concept using mixed reality and precision stylus interaction.",
+    "tags": ["ar", "vr", "healthcare", "medical-imaging", "unity"]
+  },
+  {
+    "title": "StickySpace",
+    "category": "arvr",
+    "url": "/projects/#stickyspace",
+    "github": "https://github.com/8bitdev0x8/Sticky-Space",
+    "excerpt": "Place virtual sticky notes on walls and surfaces in mixed reality, turning your surroundings into an interactive space for ideas.",
+    "tags": ["ar", "mixed-reality", "spatial", "productivity", "unity"]
+  },
+  {
+    "title": "AIR – Augmented Interactive Reality",
+    "category": "arvr",
+    "url": "/projects/#air-augmented-interactive-reality",
+    "github": "https://github.com/8bitdev0x8/Augmented-Interactive-Reality",
+    "excerpt": "Augmented Reality platform for designers, businesses, and users — enabling interactive room design and real-world object overlay via smartphone AR.",
+    "tags": ["ar", "augmented-reality", "interior-design", "mobile", "platform"]
+  },
+  {
     "title": "Virtual Forklift (AR Collision Detection)",
     "category": "arvr",
     "url": "/projects/#virtual-forklift",
@@ -83,6 +122,20 @@
     "url": "/projects/#vr-soldering-training-simulator",
     "excerpt": "A VR training simulator designed to teach soldering procedures in an immersive environment.",
     "tags": ["vr", "training", "simulation", "education"]
+  },
+  {
+    "title": "Hafnia Video Event Analyzer",
+    "category": "software",
+    "url": "/projects/#hafnia-video-event-analyzer",
+    "excerpt": "Finalist at Milestone Developer Summit hackathon. Uses a VLM API to analyze video, generate semantic metadata, and enable advanced search and summarization.",
+    "tags": ["vlm", "video-ai", "nvidia", "milestone", "hackathon", "computer-vision"]
+  },
+  {
+    "title": "H.264 Video Streamer & Analytics Dashboard",
+    "category": "software",
+    "url": "/projects/#h264-video-streamer",
+    "excerpt": "Custom C# H.264 TCP video streamer with network simulation paired with a React analytics dashboard for real-time stream health metrics.",
+    "tags": ["c#", "h264", "networking", "react", "video", "analytics"]
   },
   {
     "title": "Abu Dhabi Digital Twin",
