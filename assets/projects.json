@@ -114,6 +114,12 @@
     "tags": ["c#", "h264", "networking", "react", "video", "analytics"]
   },
   {
+    "title": "MDM Simulator",
+    "url": "/projects/#mdm-simulator",
+    "excerpt": "Apple-focused mobile device management simulator with a Swift backend and React dashboard for device lifecycle, policy, and remote command workflows.",
+    "tags": ["swift", "react", "mdm", "device-management", "api", "dashboard"]
+  },
+  {
     "title": "Abu Dhabi Digital Twin",
     "url": "/projects/#abu-dhabi-digital-twin",
     "excerpt": "Contributions to a full-scale digital twin of Abu Dhabi, including BIM integration and enhanced rendering.",

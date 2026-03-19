@@ -389,6 +389,21 @@ permalink: /projects/
 ## Software and Tools
 
 <section class="project-block">
+	{% assign mdm_simulator_project = site.data.projects | where: "url", "/projects/#mdm-simulator" | first %}
+	<h3 id="mdm-simulator" class="project-title-row">MDM Simulator
+		{% if mdm_simulator_project.github %}
+			<a class="repo-icon-link" href="{{ mdm_simulator_project.github }}" target="_blank" rel="noopener" aria-label="MDM Simulator GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>MDM Simulator is an Apple-focused mobile device management prototype built to demonstrate device lifecycle orchestration, policy enforcement, remote command execution, and operational logging in a clean admin workflow.</p>
+	<p><strong>Built with:</strong> Swift backend, React, Vite, REST + JSON &nbsp;|&nbsp; <strong>Focus:</strong> Apple fleet operations, policy assignment, and command dispatch</p>
+	<div class="project-gallery-grid">
+		<img src="/assets/img/projects/SOFTWARE/mdm-simulator-dashboard.png" alt="MDM Simulator dashboard" class="bento-project-img" />
+		<img src="/assets/img/projects/SOFTWARE/mdm-simulator-server.png" alt="MDM Simulator backend" class="bento-project-img" />
+	</div>
+</section>
+
+<section class="project-block">
 	<h3 id="h264-video-streamer" class="project-title-row">H.264 Video Streamer &amp; Analytics Dashboard</h3>
 	<p>A custom C# H.264 video streamer that encodes and sends chunks over TCP while simulating real-world network conditions — packet loss, jitter, latency, and bandwidth limits. Paired with a React-based analytics dashboard featuring real-time metrics, timeline views, and visual insights into throughput, jitter, and overall stream health.</p>
 	<p>Understanding how video behaves under unstable or constrained networks is essential for products relying on high-fidelity, low-latency video — from remote rendering and digital twins to mobile 3D and interactive media tools.</p>

@@ -138,6 +138,14 @@
     "tags": ["c#", "h264", "networking", "react", "video", "analytics"]
   },
   {
+    "title": "MDM Simulator",
+    "category": "software",
+    "url": "/projects/#mdm-simulator",
+    "github": "https://github.com/8bitdev0x8/Mobile-Device-Management",
+    "excerpt": "Apple-focused mobile device management simulator with a Swift backend and React dashboard for device lifecycle, policy, and remote command workflows.",
+    "tags": ["swift", "react", "mdm", "device-management", "api", "dashboard"]
+  },
+  {
     "title": "Abu Dhabi Digital Twin",
     "category": "arvr",
     "url": "/projects/#abu-dhabi-digital-twin",
