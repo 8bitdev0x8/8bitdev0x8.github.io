@@ -9,7 +9,7 @@ const init = () => {
   const darkSwitchesArray = document.querySelectorAll('.dark-light-switch');
   darkSwitchesArray.forEach(darkSwitch => {
     darkSwitch.innerHTML = getCookie('nightMode') ? light : dark;
-    darkSwitch.addEventListener('click', handleNightModeToggle);
+    darkSwitch.addEventListener('click', (e) => { e.preventDefault(); handleNightModeToggle(); });
   });
   // set dark mode by default if cookie not set
   if (getCookie('nightMode') === null) {
