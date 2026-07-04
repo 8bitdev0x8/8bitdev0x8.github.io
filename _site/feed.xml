@@ -1,4 +1,261 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://github.com/8bitdev0x8/feed.xml" rel="self" type="application/atom+xml" /><link href="https://github.com/8bitdev0x8/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2026-04-13T09:54:06+00:00</updated><id>https://github.com/8bitdev0x8/feed.xml</id><title type="html">8bitdev0x8</title><subtitle>blog for open-source enthusiast.</subtitle><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><entry><title type="html">Building a CHIP-8 Emulator in C++ - Part 2</title><link href="https://github.com/8bitdev0x8/post/building-a-chip8-emulator-part-2" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator in C++ - Part 2" /><published>2026-03-12T10:00:00+00:00</published><updated>2026-03-12T10:00:00+00:00</updated><id>https://github.com/8bitdev0x8/post/building-a-chip8-emulator-part-2</id><content type="html" xml:base="https://github.com/8bitdev0x8/post/building-a-chip8-emulator-part-2"><![CDATA[<h2>Rendering the Display with Dear ImGui and GLFW</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2026-07-04T04:56:53+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">8bitdev0x8</title><subtitle>blog for open-source enthusiast.</subtitle><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><entry><title type="html">The Return of Cover Flow: Why I Built Spotify Coverflow</title><link href="http://localhost:4000/post/the-return-of-cover-flow" rel="alternate" type="text/html" title="The Return of Cover Flow: Why I Built Spotify Coverflow" /><published>2026-07-04T00:00:00+00:00</published><updated>2026-07-04T00:00:00+00:00</updated><id>http://localhost:4000/post/the-return-of-cover-flow</id><content type="html" xml:base="http://localhost:4000/post/the-return-of-cover-flow"><![CDATA[<p><em>Rediscovering one of the most iconic music interfaces ever created.</em></p>
+
+<p>For nearly two decades, music applications have steadily shifted toward efficiency. Lists became denser, navigation became faster, and algorithms became smarter. Somewhere along the way, however, we lost something that physical music collections naturally encouraged: <strong>browsing</strong>.</p>
+
+<p>Album artwork became smaller. Discovery became textual. Music turned into searchable data rather than a visual collection.</p>
+
+<p>That observation led me to build <strong>Spotify Coverflow</strong>—an open-source application that brings back one of the most memorable user interfaces in digital music history.</p>
+
+<p>The source code for this project is available here:</p>
+
+<p><a href="https://github.com/8bitdev0x8/Spotify-Coverflow">https://github.com/8bitdev0x8/Spotify-Coverflow</a></p>
+
+<p><img src="/assets/img/jekyll/coverflow/spotify-coverflow-1.jpg" alt="Spotify Coverflow browsing a music collection" loading="lazy" decoding="async" /></p>
+
+<p><em>Spotify Coverflow in action — browsing a Spotify library through album artwork.</em></p>
+
+<hr />
+
+<h2>Introduction</h2>
+
+<p>Cover Flow is more than a nostalgic animation.</p>
+
+<p>It represents a different philosophy of interacting with media—one where artwork becomes the primary navigation element instead of metadata.</p>
+
+<p>Rather than scrolling endless rows of text, users flip through albums almost like browsing records in a music store.</p>
+
+<p>Although the original UI disappeared from mainstream operating systems, its design principles remain surprisingly relevant today, especially with modern GPUs capable of rendering smooth 3D interfaces effortlessly.</p>
+
+<p>Spotify Coverflow explores whether this interaction model still has value in today’s streaming-first world.</p>
+
+<hr />
+
+<h2>A Brief History of Cover Flow</h2>
+
+<p>Cover Flow began as a concept proposed by artist Andrew Coulter Enright in his 2004 blog post <a href="https://web.archive.org/web/20050331055401/http://thetreehouseandthecave.blogspot.com/2004/12/dissatisfaction-sows-innovation.html"><em>Dissatisfaction Sows Innovation</em></a>, and was brought to life by developer Jonathan del Strother, whose standalone CoverFlow application for Mac OS X quickly gained attention as a visual browser for music libraries.</p>
+
+<p>Apple recognized its potential, acquired the technology in 2006, and later secured a design patent for the interface (<a href="https://patents.google.com/patent/USD613300">USD613300</a>).</p>
+
+<p>It first appeared in iTunes 7 before eventually becoming one of the defining interactions of the iPod Classic, where users could flip through album covers using the Click Wheel.</p>
+
+<p><img src="/assets/img/jekyll/coverflow/itunes-7-cover-flow.jpg" alt="Cover Flow in iTunes 7" loading="lazy" decoding="async" /></p>
+
+<p><em>Cover Flow as it appeared in iTunes 7. Image via <a href="https://512pixels.net/2023/10/the-history-of-cover-flow/">512 Pixels</a>.</em></p>
+
+<p>Cover Flow’s biggest moment came in January 2007, when Steve Jobs introduced the original iPhone. When the user rotated the device into landscape orientation, the Music app would show the entire library’s albums in Cover Flow, and scrolling through them was as easy as the swipe of a finger. You can watch that moment from the keynote <a href="https://youtu.be/VQKMoT-6XSg?t=961">here</a>.</p>
+
+<p><img src="/assets/img/jekyll/coverflow/jobs-2007-iphone-cover-flow.jpg" alt="Steve Jobs demonstrating Cover Flow on the original iPhone in January 2007" loading="lazy" decoding="async" /></p>
+
+<p><em>Steve Jobs demonstrating Cover Flow on the original iPhone at Macworld 2007. Image via <a href="https://512pixels.net/2023/10/the-history-of-cover-flow/">512 Pixels</a>.</em></p>
+
+<p>The interface transformed music libraries from static lists into something tactile and visual.</p>
+
+<p>Instead of selecting albums by reading names, users recognized them instantly through artwork.</p>
+
+<p>For many people, album covers became as memorable as the music itself.</p>
+
+<hr />
+
+<h2>Why Cover Flow Disappeared</h2>
+
+<p>Despite its popularity, Cover Flow slowly disappeared from Apple’s software ecosystem.</p>
+
+<p>Several factors contributed to its decline.</p>
+
+<h3>1. Scale</h3>
+
+<p>Music libraries grew dramatically.</p>
+
+<p>Scrolling through thousands of albums became slower than simply typing into a search box.</p>
+
+<p>Search-based interfaces proved more efficient for large collections.</p>
+
+<h3>2. Mobile Design</h3>
+
+<p>Smartphones emphasized vertical scrolling and touch-first interactions.</p>
+
+<p>Complex 3D interfaces consumed valuable screen space and computing resources, making simpler layouts more practical.</p>
+
+<h3>3. Flat Design</h3>
+
+<p>The design industry shifted toward minimalism.</p>
+
+<p>Around 2013, skeuomorphic interfaces gave way to flat design languages focused on clarity and consistency.</p>
+
+<p>Decorative visual effects—including Cover Flow—were often considered unnecessary.</p>
+
+<h3>4. Streaming Changed Discovery</h3>
+
+<p>Streaming services encouraged users to discover music through recommendations, playlists, and personalized feeds rather than browsing personal collections.</p>
+
+<p>As recommendation engines improved, visual browsing became less central.</p>
+
+<hr />
+
+<h2>Why Cover Flow Still Matters</h2>
+
+<p>Although Cover Flow is no longer mainstream, its underlying ideas remain compelling.</p>
+
+<p>Music is inherently visual.</p>
+
+<p>Album artwork communicates mood, genre, identity, and artistic direction before a single note is played.</p>
+
+<p>Browsing covers encourages exploration in ways that search boxes cannot.</p>
+
+<p>Instead of asking users to know exactly what they’re looking for, Cover Flow rewards curiosity.</p>
+
+<p>This makes it especially enjoyable for:</p>
+
+<ul>
+  <li>rediscovering forgotten albums</li>
+  <li>exploring artists visually</li>
+  <li>appreciating album artwork</li>
+  <li>recreating the feeling of browsing physical vinyl collections</li>
+</ul>
+
+<p>Modern GPUs also remove many of the performance limitations that existed when Cover Flow was originally designed.</p>
+
+<hr />
+
+<h2>Why I Built Spotify Coverflow</h2>
+
+<p>Spotify provides access to one of the largest music libraries ever assembled.</p>
+
+<p>Ironically, that enormous catalog is usually experienced through relatively conventional interfaces:</p>
+
+<ul>
+  <li>lists</li>
+  <li>playlists</li>
+  <li>grids</li>
+  <li>recommendations</li>
+</ul>
+
+<p>I wanted to experiment with a different interaction model.</p>
+
+<p>Instead of replacing Spotify, I wanted to build an alternative visualization layer that celebrates album artwork.</p>
+
+<p>Spotify Coverflow is an exploration of questions like:</p>
+
+<ul>
+  <li>Can visual browsing improve music discovery?</li>
+  <li>Can nostalgia coexist with modern UX?</li>
+  <li>Does album artwork deserve to be the primary interface again?</li>
+</ul>
+
+<p>The project isn’t about recreating Apple’s interface pixel-for-pixel.</p>
+
+<p>It’s about adapting an iconic interaction pattern for today’s streaming ecosystem.</p>
+
+<p><img src="/assets/img/jekyll/coverflow/spotify-coverflow-2.jpg" alt="Spotify Coverflow playback view" loading="lazy" decoding="async" /></p>
+
+<p><em>The playback view — artwork stays front and center while a track plays.</em></p>
+
+<hr />
+
+<h2>Design Philosophy</h2>
+
+<p>Spotify Coverflow was built around several principles.</p>
+
+<h3>Music First</h3>
+
+<p>Album artwork should dominate the interface.</p>
+
+<p>The UI should disappear behind the music collection itself.</p>
+
+<h3>Motion with Purpose</h3>
+
+<p>Animations are not decoration.</p>
+
+<p>Movement communicates focus, context, and spatial relationships between albums.</p>
+
+<p>Every transition should help users understand where they are in the collection.</p>
+
+<h3>Familiar but Modern</h3>
+
+<p>The interface draws inspiration from classic Cover Flow without attempting to become a museum piece.</p>
+
+<p>Modern rendering techniques, responsive layouts, and contemporary development practices allow the concept to evolve.</p>
+
+<h3>Open Source</h3>
+
+<p>Making the project open source encourages experimentation.</p>
+
+<p>Others can build upon it, improve performance, introduce new interaction models, or adapt it for entirely different music platforms.</p>
+
+<hr />
+
+<h2>Technical Goals</h2>
+
+<p>The project also serves as a technical exploration.</p>
+
+<p>It investigates:</p>
+
+<ul>
+  <li>GPU-accelerated UI rendering</li>
+  <li>smooth animation pipelines</li>
+  <li>Spotify API integration</li>
+  <li>efficient album artwork loading</li>
+  <li>responsive 3D layouts</li>
+  <li>modern frontend architecture</li>
+</ul>
+
+<p>Beyond nostalgia, it demonstrates how classic interaction models can be reimagined using today’s web technologies.</p>
+
+<hr />
+
+<h2>Looking Forward</h2>
+
+<p>User interfaces often move in cycles.</p>
+
+<p>What once seemed outdated can become relevant again when technology catches up.</p>
+
+<p>Mechanical keyboards returned.</p>
+
+<p>Vinyl records returned.</p>
+
+<p>Physical cameras returned.</p>
+
+<p>Perhaps visually immersive media browsing deserves another chance as well.</p>
+
+<p>Cover Flow reminds us that software isn’t only about efficiency.</p>
+
+<p>Sometimes the journey of finding music can be just as enjoyable as listening to it.</p>
+
+<p>Spotify Coverflow is my contribution to that idea.</p>
+
+<hr />
+
+<h2>Conclusion</h2>
+
+<p>Cover Flow wasn’t simply an animation.</p>
+
+<p>It represented an era when software encouraged exploration through visuals rather than search.</p>
+
+<p>While modern interfaces optimize for speed, there is still room for experiences that prioritize delight, discovery, and appreciation of music as visual art.</p>
+
+<p>Spotify Coverflow is an experiment in bringing those ideas into the streaming era.</p>
+
+<p>Whether Cover Flow becomes popular again isn’t the goal.</p>
+
+<p>The goal is to ask whether we’ve lost something valuable by abandoning it.</p>
+
+<p>Sometimes the best ideas don’t disappear.</p>
+
+<p>They simply wait for the right time to return.</p>
+
+<hr />
+
+<h2>References</h2>
+
+<ul>
+  <li>GitHub Repository (Spotify Coverflow): <a href="https://github.com/8bitdev0x8/Spotify-Coverflow">https://github.com/8bitdev0x8/Spotify-Coverflow</a></li>
+  <li>The History of Cover Flow — 512 Pixels: <a href="https://512pixels.net/2023/10/the-history-of-cover-flow/">https://512pixels.net/2023/10/the-history-of-cover-flow/</a></li>
+  <li><em>Dissatisfaction Sows Innovation</em> — Andrew Coulter Enright’s original 2004 concept post (Internet Archive): <a href="https://web.archive.org/web/20050331055401/http://thetreehouseandthecave.blogspot.com/2004/12/dissatisfaction-sows-innovation.html">https://web.archive.org/web/20050331055401/http://thetreehouseandthecave.blogspot.com/2004/12/dissatisfaction-sows-innovation.html</a></li>
+  <li>iPhone Introduction, Macworld 2007 — Cover Flow demo (YouTube): <a href="https://youtu.be/VQKMoT-6XSg?t=961">https://youtu.be/VQKMoT-6XSg?t=961</a></li>
+  <li>Apple’s Cover Flow design patent (USD613300): <a href="https://patents.google.com/patent/USD613300">https://patents.google.com/patent/USD613300</a></li>
+  <li>Cover Flow — Wikipedia: <a href="https://en.wikipedia.org/wiki/Cover_Flow">https://en.wikipedia.org/wiki/Cover_Flow</a></li>
+  <li>The Rise and Fall of Cover Flow: A Design Perspective: <a href="https://alextheactualizer.com/ux-ui-blog-posts/the-rise-and-fall-of-cover-flow-a-design-perspective">https://alextheactualizer.com/ux-ui-blog-posts/the-rise-and-fall-of-cover-flow-a-design-perspective</a></li>
+</ul>]]></content><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Rediscovering one of the most iconic music interfaces ever created.]]></summary></entry><entry><title type="html">Building a CHIP-8 Emulator in C++ - Part 2</title><link href="http://localhost:4000/post/building-a-chip8-emulator-part-2" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator in C++ - Part 2" /><published>2026-03-12T10:00:00+00:00</published><updated>2026-03-12T10:00:00+00:00</updated><id>http://localhost:4000/post/building-a-chip8-emulator-part-2</id><content type="html" xml:base="http://localhost:4000/post/building-a-chip8-emulator-part-2"><![CDATA[<h2>Rendering the Display with Dear ImGui and GLFW</h2>
 
 <p>In the first part of this series, I introduced the CHIP-8 architecture and the motivation behind building an emulator.</p>
 
@@ -48,7 +305,7 @@
   <li>display rendering</li>
 </ul>
 
-<p><img src="/assets/img/jekyll/chip8-part2/project-set-up-screen.png" alt="CHIP-8 project setup screenshot" /></p>
+<p><img src="/assets/img/jekyll/chip8-part2/project-set-up-screen.png" alt="CHIP-8 project setup screenshot" loading="lazy" decoding="async" /></p>
 
 <p><em>Project setup snapshot from the initial build phase in Visual Studio.</em></p>
 
@@ -84,7 +341,7 @@
 
 <p>The renderer then draws this framebuffer to the screen.</p>
 
-<p><img src="/assets/img/jekyll/chip8-part2/08-space-invaders-screen.png" alt="Space Invaders rendered on CHIP-8 screen" /></p>
+<p><img src="/assets/img/jekyll/chip8-part2/08-space-invaders-screen.png" alt="Space Invaders rendered on CHIP-8 screen" loading="lazy" decoding="async" /></p>
 
 <p><em>Space Invaders drawn to the screen from the framebuffer.</em></p>
 
@@ -257,7 +514,7 @@
 
 <p>This allows the emulator to behave close to the original system.</p>
 
-<p><img src="/assets/img/jekyll/chip8-part2/06-debugger-registers-panel.png" alt="Disassembly panel with current instruction" /></p>
+<p><img src="/assets/img/jekyll/chip8-part2/06-debugger-registers-panel.png" alt="Disassembly panel with current instruction" loading="lazy" decoding="async" /></p>
 
 <p><em>Live debugger controls for timing and execution: run/step/step-back/reset, adjustable clock target (Hz), and register snapshots (<code class="language-plaintext highlighter-rouge">I</code>, <code class="language-plaintext highlighter-rouge">PC</code>, <code class="language-plaintext highlighter-rouge">SP</code>, <code class="language-plaintext highlighter-rouge">V0-VF</code>).</em></p>
 
@@ -284,7 +541,7 @@
   <li>building the main emulator loop</li>
 </ul>
 
-<p>In the next part, I will explore the CPU implementation, including how CHIP-8 instructions are decoded and executed.</p>]]></content><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Rendering the Display with Dear ImGui and GLFW]]></summary></entry><entry><title type="html">Building a CHIP-8 Emulator: My Journey Into Computer Architecture</title><link href="https://github.com/8bitdev0x8/post/chip8_emulator_blog" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator: My Journey Into Computer Architecture" /><published>2025-10-26T10:00:00+00:00</published><updated>2025-10-26T10:00:00+00:00</updated><id>https://github.com/8bitdev0x8/post/chip8_emulator_blog</id><content type="html" xml:base="https://github.com/8bitdev0x8/post/chip8_emulator_blog"><![CDATA[<p>This has been a long-term idea in my mind. Ever since I started using a computer in my childhood, I’ve always wondered: <strong>how could I build a computer from scratch?</strong> And yes, I literally mean from scratch—using bare transistor circuits.</p>
+<p>In the next part, I will explore the CPU implementation, including how CHIP-8 instructions are decoded and executed.</p>]]></content><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Rendering the Display with Dear ImGui and GLFW]]></summary></entry><entry><title type="html">Building a CHIP-8 Emulator: My Journey Into Computer Architecture</title><link href="http://localhost:4000/post/chip8_emulator_blog" rel="alternate" type="text/html" title="Building a CHIP-8 Emulator: My Journey Into Computer Architecture" /><published>2025-10-26T10:00:00+00:00</published><updated>2025-10-26T10:00:00+00:00</updated><id>http://localhost:4000/post/chip8_emulator_blog</id><content type="html" xml:base="http://localhost:4000/post/chip8_emulator_blog"><![CDATA[<p>This has been a long-term idea in my mind. Ever since I started using a computer in my childhood, I’ve always wondered: <strong>how could I build a computer from scratch?</strong> And yes, I literally mean from scratch—using bare transistor circuits.</p>
 
 <p>After a long period of thinking and planning, I have finally decided to take the plunge. To start, I chose a simple, beginner-friendly design as my entry into the fascinating world of computer architecture.</p>
 
@@ -392,7 +649,7 @@
 
 <hr />
 
-<p>This is the start of my journey. CHIP-8 will serve as a stepping stone, teaching me the fundamentals of emulation, computer architecture, and low-level programming, all leading toward my bigger dream of building a computer from scratch.</p>]]></content><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[This has been a long-term idea in my mind. Ever since I started using a computer in my childhood, I’ve always wondered: how could I build a computer from scratch? And yes, I literally mean from scratch—using bare transistor circuits.]]></summary></entry><entry><title type="html">Welcome to My Blog</title><link href="https://github.com/8bitdev0x8/post/welcome-to-my-blog" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-10-06T10:00:00+00:00</published><updated>2025-10-06T10:00:00+00:00</updated><id>https://github.com/8bitdev0x8/post/welcome-to-my-blog</id><content type="html" xml:base="https://github.com/8bitdev0x8/post/welcome-to-my-blog"><![CDATA[<p>I’m thrilled to finally hit “publish” and welcome you to this little corner of the internet. This blog has been on my mind for a while, and today marks the start of a journey I’ve been excited to share.</p>
+<p>This is the start of my journey. CHIP-8 will serve as a stepping stone, teaching me the fundamentals of emulation, computer architecture, and low-level programming, all leading toward my bigger dream of building a computer from scratch.</p>]]></content><author><name>8bitdev0x8</name><email>8bitdev0x8@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[This has been a long-term idea in my mind. Ever since I started using a computer in my childhood, I’ve always wondered: how could I build a computer from scratch? And yes, I literally mean from scratch—using bare transistor circuits.]]></summary></entry><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/post/welcome-to-my-blog" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2025-10-06T10:00:00+00:00</published><updated>2025-10-06T10:00:00+00:00</updated><id>http://localhost:4000/post/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/post/welcome-to-my-blog"><![CDATA[<p>I’m thrilled to finally hit “publish” and welcome you to this little corner of the internet. This blog has been on my mind for a while, and today marks the start of a journey I’ve been excited to share.</p>
 
 <p>Why I Started This Blog</p>
 

@@ -111,9 +111,9 @@ permalink: /projects/
 	<p>Li-Fi is a wireless communication technology that uses LED light instead of radio waves to transmit data. It offers much faster speeds than Wi-Fi, improved security since light cannot pass through walls, and is useful in environments like hospitals and airplanes.</p>
 	<div class="project-gallery-grid">
 		<div class="project-img-sm">
-			<img src="/assets/img/projects/HARDWARE/users_cmgb13uge00w9sj014jrv7djf_LgY4emHp2qN9n1tw-IMG_0485.jpg" alt="Li-Fi Project" class="bento-project-img" />
+			<img src="/assets/img/projects/HARDWARE/lifi-prototype.jpg" alt="Li-Fi Project" class="bento-project-img" loading="lazy" decoding="async" />
 		</div>
-		<img src="/assets/img/projects/HARDWARE/LIFI.jpg" alt="Li-Fi diagram" class="bento-project-img" />
+		<img src="/assets/img/projects/HARDWARE/lifi-diagram.jpg" alt="Li-Fi diagram" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -125,7 +125,7 @@ permalink: /projects/
 		{% endif %}
 	</h3>
 	<p>SerialPilot is an RC vehicle controlled through a serial interface. Commands are sent from a computer or microcontroller to steer and manage the vehicle over UART.</p>
-	<img src="/assets/img/projects/HARDWARE/users_cmgb13uge00w9sj014jrv7djf_PMJ2hgmSpPle8FiQ-20150929_133900.jpg" alt="SerialPilot" class="bento-project-img" />
+	<img src="/assets/img/projects/HARDWARE/serialpilot-vehicle.jpg" alt="SerialPilot" class="bento-project-img" loading="lazy" decoding="async" />
 </section>
 
 <section class="project-block">
@@ -136,7 +136,7 @@ permalink: /projects/
 		{% endif %}
 	</h3>
 	<p>DualSense2Serial is a bridge that converts input data from the Sony DualSense Wireless Controller into serial communication, allowing microcontrollers, robots, and custom hardware to be controlled using a PlayStation 5 controller.</p>
-	<img src="https://raw.githubusercontent.com/8bitdev0x8/DualSense2Serial/main/images/Duelsense2Serial.png" alt="DualSense2Serial README Screenshot" class="bento-project-img" />
+	<img src="https://raw.githubusercontent.com/8bitdev0x8/DualSense2Serial/main/images/Duelsense2Serial.png" alt="DualSense2Serial README Screenshot" class="bento-project-img" loading="lazy" decoding="async" />
 </section>
 
 <section class="project-block">
@@ -148,7 +148,7 @@ permalink: /projects/
 	</h3>
 	<p>Real-time, web-based PS5 DualSense controller visualizer that shows button presses, sticks, triggers, and touchpad input on screen. Perfect for adding a live controller overlay to your stream via OBS (browser source).</p>
 	<p><a href="https://jojysaju.dev/ps5-controller-visualizer/" target="_blank" rel="noopener">Live Demo</a></p>
-	<img src="https://jojysaju.dev/ps5-controller-visualizer/Images/PS5Controller.gif" alt="PS5 DualSense Controller Visualizer README GIF" class="bento-project-img" />
+	<img src="https://jojysaju.dev/ps5-controller-visualizer/Images/PS5Controller.gif" alt="PS5 DualSense Controller Visualizer README GIF" class="bento-project-img" loading="lazy" decoding="async" />
 </section>
 
 <section class="project-block">
@@ -160,13 +160,13 @@ permalink: /projects/
 	</h3>
 	<p>CAD concept and render set for an infrared module prototype.</p>
 	<div class="project-gallery-grid">
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1%20front.png" alt="IR Module v1 Front" class="bento-project-img" />
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1%20full%20view.png" alt="IR Module v1 Full View" class="bento-project-img" />
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1%20left.png" alt="IR Module v1 Left" class="bento-project-img" />
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1%20side.png" alt="IR Module v1 Side" class="bento-project-img" />
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1%20top.png" alt="IR Module v1 Top" class="bento-project-img" />
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1.jpg" alt="IR Module v1 Photo" class="bento-project-img" />
-		<img src="/assets/img/projects/CAD/Ir%20module%20v1.png" alt="IR Module v1 Render" class="bento-project-img" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-front.png" alt="IR Module v1 Front" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-full-view.png" alt="IR Module v1 Full View" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-left.png" alt="IR Module v1 Left" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-side.png" alt="IR Module v1 Side" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-top.png" alt="IR Module v1 Top" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-photo.jpg" alt="IR Module v1 Photo" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/CAD/ir-module-v1-render.png" alt="IR Module v1 Render" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -181,10 +181,10 @@ permalink: /projects/
 	</h3>
 	<p>The Elixtra logo was designed in Adobe Illustrator to create a clean and adaptable identity for both digital and print use.</p>
 	<div class="project-gallery-grid">
-		<img src="/assets/img/projects/DESIGN/XL-Black@4x-100.jpg" alt="XL-Black" class="bento-project-img" />
-		<img src="/assets/img/projects/DESIGN/XL-Color@4x-100.jpg" alt="XL-Color" class="bento-project-img" />
-		<img src="/assets/img/projects/DESIGN/XL-Inverse@4x-100.jpg" alt="XL-Inverse" class="bento-project-img" />
-		<img src="/assets/img/projects/DESIGN/XL-White@4x-100.jpg" alt="XL-White" class="bento-project-img" />
+		<img src="/assets/img/projects/DESIGN/elixtra-logo-black.jpg" alt="Elixtra logo - black" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/DESIGN/elixtra-logo-color.jpg" alt="Elixtra logo - color" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/DESIGN/elixtra-logo-inverse.jpg" alt="Elixtra logo - inverse" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/DESIGN/elixtra-logo-white.jpg" alt="Elixtra logo - white" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -198,23 +198,23 @@ permalink: /projects/
 	<p>This prototype was developed as part of a master's project for comparing grocery prices across stores with clear navigation and quick comparison flows.</p>
 	<div class="uiux-gallery">
 		<div class="uiux-item">
-			<img src="/assets/img/projects/UI/202.png" alt="Price Comparison App - Product List" class="bento-project-img" />
+			<img src="/assets/img/projects/UI/price-comparison-product-list.png" alt="Price Comparison App - Product List" class="bento-project-img" loading="lazy" decoding="async" />
 			<p><strong>Product List:</strong> Displays items with prices from multiple stores.</p>
 		</div>
 		<div class="uiux-item">
-			<img src="/assets/img/projects/UI/201.png" alt="Price Comparison App - Store Selection" class="bento-project-img" />
+			<img src="/assets/img/projects/UI/price-comparison-store-selection.jpg" alt="Price Comparison App - Store Selection" class="bento-project-img" loading="lazy" decoding="async" />
 			<p><strong>Store Selection:</strong> Lets users choose preferred stores.</p>
 		</div>
 		<div class="uiux-item">
-			<img src="/assets/img/projects/UI/207.png" alt="Price Comparison App - Comparison View" class="bento-project-img" />
+			<img src="/assets/img/projects/UI/price-comparison-comparison-view.jpg" alt="Price Comparison App - Comparison View" class="bento-project-img" loading="lazy" decoding="async" />
 			<p><strong>Comparison View:</strong> Highlights savings across stores.</p>
 		</div>
 		<div class="uiux-item">
-			<img src="/assets/img/projects/UI/203.png" alt="Price Comparison App - Cart" class="bento-project-img" />
+			<img src="/assets/img/projects/UI/price-comparison-cart.png" alt="Price Comparison App - Cart" class="bento-project-img" loading="lazy" decoding="async" />
 			<p><strong>Cart:</strong> Shows total costs by store.</p>
 		</div>
 		<div class="uiux-item">
-			<img src="/assets/img/projects/UI/206.png" alt="Price Comparison App - Checkout" class="bento-project-img" />
+			<img src="/assets/img/projects/UI/price-comparison-checkout.jpg" alt="Price Comparison App - Checkout" class="bento-project-img" loading="lazy" decoding="async" />
 			<p><strong>Checkout:</strong> Streamlined purchase summary with savings.</p>
 		</div>
 	</div>
@@ -230,7 +230,7 @@ permalink: /projects/
 	<p>GoMend focuses on usability, clear interaction flow, and accessible visual structure.</p>
 	<p><a href="https://youtu.be/iIBwPSjvQzA">GoMend UI Design and Prototype (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/iIBwPSjvQzA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/iIBwPSjvQzA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 </section>
 
@@ -244,7 +244,7 @@ permalink: /projects/
 	<p>Mood Tax is a speculative master's project that explores emotional debt through immersive UI storytelling and interactive flows.</p>
 	<p><a href="https://youtu.be/qhgiZpLOff4">Mood Tax UI/UX Design and Prototype (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/qhgiZpLOff4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/qhgiZpLOff4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 </section>
 
@@ -260,7 +260,7 @@ permalink: /projects/
 	<p>Immersive Surgical Planning with Precision Stylus Interaction.</p>
 	<p><a href="https://www.logitech.com/en-eu/discover/devstudio/challenge" target="_blank" rel="noopener">Logitech MX Ink Challenge</a></p>
 	<p><a href="https://devpost.com/software/voxel-mr" target="_blank" rel="noopener">Project on Devpost</a></p>
-	<img src="https://raw.githubusercontent.com/8bitdev0x8/Voxel-MR/main/VoxelMR.png" alt="VoxelMR GitHub README image" class="bento-project-img" />
+	<img src="https://raw.githubusercontent.com/8bitdev0x8/Voxel-MR/main/VoxelMR.png" alt="VoxelMR GitHub README image" class="bento-project-img" loading="lazy" decoding="async" />
 </section>
 
 <section class="project-block">
@@ -274,12 +274,12 @@ permalink: /projects/
 	<p><strong>Created for:</strong> XRCC Hackathon 2025 &nbsp;|&nbsp; <strong>Built with:</strong> Unity (C#), Meta SDK &nbsp;|&nbsp; <strong>Tested on:</strong> Meta XR Simulator &nbsp;|&nbsp; <strong>Style:</strong> Rapid prototyping</p>
 	<p><a href="https://youtu.be/2yoNOJR6SPI" target="_blank" rel="noopener">Demo Video (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/2yoNOJR6SPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/2yoNOJR6SPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 	<div class="project-gallery-grid">
-		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/1.png" alt="StickySpace - Screenshot 1" class="bento-project-img" />
-		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/2.png" alt="StickySpace - Screenshot 2" class="bento-project-img" />
-		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/4.png" alt="StickySpace - Screenshot 3" class="bento-project-img" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/1.png" alt="StickySpace - Screenshot 1" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/2.png" alt="StickySpace - Screenshot 2" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Sticky-Space/main/Images/4.png" alt="StickySpace - Screenshot 3" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -292,9 +292,9 @@ permalink: /projects/
 	</h3>
 	<p>AIR is an Augmented Reality platform for designers, businesses, and users. It enhances natural environments with interactive digital overlays using AR cameras, object recognition, and smartphone applications. Our implementation focuses on interior design — giving users the ability to interactively arrange and visualise 3D furniture models in their real rooms through AR, bridging the gap between designers and clients.</p>
 	<div class="project-gallery-grid">
-		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/air.png" alt="AIR – App UI" class="bento-project-img" />
-		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/flowchart.png" alt="AIR – Flowchart" class="bento-project-img" />
-		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/renderviewer.png" alt="AIR – Render Viewer" class="bento-project-img" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/air.png" alt="AIR – App UI" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/flowchart.png" alt="AIR – Flowchart" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="https://raw.githubusercontent.com/8bitdev0x8/Augmented-Interactive-Reality/main/docs/UI/renderviewer.png" alt="AIR – Render Viewer" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -308,7 +308,7 @@ permalink: /projects/
 	<p>Virtual Forklift is a 1:1 augmented reality prototype for visualizing forklift movement and testing collision risks in real spaces.</p>
 	<p><a href="https://youtu.be/lHfSzYoIINg">Virtual Forklift - AR Collision Detection Prototype (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/lHfSzYoIINg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/lHfSzYoIINg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 </section>
 
@@ -322,7 +322,7 @@ permalink: /projects/
 	<p>MQTT-based IoT backend used to stream data into digital twin visualizations.</p>
 	<p><a href="https://youtu.be/v_VExQuljdg">Digital Twin - IoT MQTT Server (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/v_VExQuljdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/v_VExQuljdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 </section>
 
@@ -337,7 +337,7 @@ permalink: /projects/
 	<p><a href="https://www.travancoreanalytics.com/products/twinverse/">Learn more about TwinVerse</a></p>
 	<p><a href="https://youtu.be/f47Q37g1FGo">SFO Airport Digital Twin Demo (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/f47Q37g1FGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/f47Q37g1FGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 </section>
 
@@ -350,10 +350,10 @@ permalink: /projects/
 	</h3>
 	<p>Immersive training simulator designed to teach soldering procedures and safety in a virtual environment.</p>
 	<div class="project-gallery-grid">
-		<img src="/assets/img/projects/VR/users_cmgb13uge00w9sj014jrv7djf_70N0jwRWvlfeWpQD-Screenshot20202403.png" alt="VR Soldering Simulator - Step 1" class="bento-project-img" />
-		<img src="/assets/img/projects/VR/users_cmgb13uge00w9sj014jrv7djf_NwLfVnkTvFz9UwE2-Screenshot20201212.png" alt="VR Soldering Simulator - Step 2" class="bento-project-img" />
-		<img src="/assets/img/projects/VR/users_cmgb13uge00w9sj014jrv7djf_r24tIApmws55oKZv-Screenshot20202639.png" alt="VR Soldering Simulator - Step 3" class="bento-project-img" />
-		<img src="/assets/img/projects/VR/users_cmgb13uge00w9sj014jrv7djf_wTeDEmGHx5xlUyHp-Screenshot20203059.png" alt="VR Soldering Simulator - Step 4" class="bento-project-img" />
+		<img src="/assets/img/projects/VR/vr-soldering-step-1.jpg" alt="VR Soldering Simulator - Step 1" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/VR/vr-soldering-step-2.jpg" alt="VR Soldering Simulator - Step 2" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/VR/vr-soldering-step-3.jpg" alt="VR Soldering Simulator - Step 3" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/VR/vr-soldering-step-4.jpg" alt="VR Soldering Simulator - Step 4" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -367,7 +367,7 @@ permalink: /projects/
 	<p>Contribution to a city-scale digital twin with BIM integration, rendering improvements, and interactive sector-level navigation.</p>
 	<p><a href="https://youtu.be/2I4-DqMxNY4">Abu Dhabi Digital Twin Demo (YouTube)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://www.youtube.com/embed/2I4-DqMxNY4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://www.youtube.com/embed/2I4-DqMxNY4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 </section>
 
@@ -382,11 +382,27 @@ permalink: /projects/
 	</h3>
 	<p><a href="https://vimeo.com/1035192003/287bfb8b74">Bellarom (Vimeo)</a></p>
 	<div class="projects-embed">
-		<iframe src="https://player.vimeo.com/video/1035192003?h=287bfb8b74" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+		<iframe loading="lazy" src="https://player.vimeo.com/video/1035192003?h=287bfb8b74" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 	</div>
 </section>
 
 ## Software and Tools
+
+<section class="project-block">
+	{% assign spotify_coverflow_project = site.data.projects | where: "url", "/projects/#spotify-coverflow" | first %}
+	<h3 id="spotify-coverflow" class="project-title-row">Spotify Coverflow
+		{% if spotify_coverflow_project.github %}
+			<a class="repo-icon-link" href="{{ spotify_coverflow_project.github }}" target="_blank" rel="noopener" aria-label="Spotify Coverflow GitHub repository" title="GitHub repository">{{ github_icon_markup }}</a>
+		{% endif %}
+	</h3>
+	<p>Spotify Coverflow revives Apple's iconic Cover Flow interface as a 3D album-art browser for Spotify. Flip through your liked tracks or any public playlist with the classic tilted-cover-and-reflection effect, with artwork front and center.</p>
+	<p><strong>Built with:</strong> Vanilla HTML, CSS, JavaScript — no frameworks, no build step &nbsp;|&nbsp; <strong>Focus:</strong> Visual music browsing via the Spotify Web API</p>
+	<p><a href="/post/the-return-of-cover-flow">Read the blog post</a></p>
+	<div class="project-gallery-grid">
+		<img src="/assets/img/jekyll/coverflow/spotify-coverflow-1.jpg" alt="Spotify Coverflow - browsing view" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/jekyll/coverflow/spotify-coverflow-2.jpg" alt="Spotify Coverflow - playback view" class="bento-project-img" loading="lazy" decoding="async" />
+	</div>
+</section>
 
 <section class="project-block">
 	{% assign mdm_simulator_project = site.data.projects | where: "url", "/projects/#mdm-simulator" | first %}
@@ -398,8 +414,8 @@ permalink: /projects/
 	<p>MDM Simulator is an Apple-focused mobile device management prototype built to demonstrate device lifecycle orchestration, policy enforcement, remote command execution, and operational logging in a clean admin workflow.</p>
 	<p><strong>Built with:</strong> Swift backend, React, Vite, REST + JSON &nbsp;|&nbsp; <strong>Focus:</strong> Apple fleet operations, policy assignment, and command dispatch</p>
 	<div class="project-gallery-grid">
-		<img src="/assets/img/projects/SOFTWARE/mdm-simulator-dashboard.png" alt="MDM Simulator dashboard" class="bento-project-img" />
-		<img src="/assets/img/projects/SOFTWARE/mdm-simulator-server.png" alt="MDM Simulator backend" class="bento-project-img" />
+		<img src="/assets/img/projects/SOFTWARE/mdm-simulator-dashboard.jpg" alt="MDM Simulator dashboard" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/SOFTWARE/mdm-simulator-server.jpg" alt="MDM Simulator backend" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -408,9 +424,8 @@ permalink: /projects/
 	<p>A custom C# H.264 video streamer that encodes and sends chunks over TCP while simulating real-world network conditions — packet loss, jitter, latency, and bandwidth limits. Paired with a React-based analytics dashboard featuring real-time metrics, timeline views, and visual insights into throughput, jitter, and overall stream health.</p>
 	<p>Understanding how video behaves under unstable or constrained networks is essential for products relying on high-fidelity, low-latency video — from remote rendering and digital twins to mobile 3D and interactive media tools.</p>
 	<div class="project-gallery-grid">
-		<img src="https://media.licdn.com/dms/image/v2/D5622AQE5eoU5l0240w/feedshare-shrink_2048_1536/B56ZrL37yXHkAw-/0/1764357030542?e=1775088000&v=beta&t=O95P-QZeXRqp1hf_b0-XeAaQMMz1LZlMq0Bd8Lhldco" alt="H.264 Streamer - Dashboard Overview" class="bento-project-img" />
-		<img src="https://media.licdn.com/dms/image/v2/D5622AQHzlZfatxvBCw/feedshare-shrink_1280/B56ZrL37yFIYAs-/0/1764357029705?e=1775088000&v=beta&t=ZC5CujOoFcjqmJA4ELPxDAZuPAOqz2Fgmrj9B8han7k" alt="H.264 Streamer - Metrics View" class="bento-project-img" />
-		<img src="https://media.licdn.com/dms/image/v2/D5622AQHb4C8kChWS-A/feedshare-shrink_1280/B56ZrL37yPJ8As-/0/1764357030578?e=1775088000&v=beta&t=Zw_cAq9V1NtYZ3mkKge-W04RVKbpYMMdX4rszHlPdXM" alt="H.264 Streamer - Timeline View" class="bento-project-img" />
+		<img src="/assets/img/projects/SOFTWARE/h264-streamer-dashboard.jpg" alt="H.264 Streamer - Real-time stream metrics dashboard with live video" class="bento-project-img" loading="lazy" decoding="async" />
+		<img src="/assets/img/projects/SOFTWARE/h264-streamer-snapshot-viewer.png" alt="H.264 Streamer - Snapshot Viewer with latency, FPS, and bitrate timeline" class="bento-project-img" loading="lazy" decoding="async" />
 	</div>
 </section>
 
@@ -423,24 +438,7 @@ permalink: /projects/
 		&nbsp;|&nbsp;
 		<a href="https://ne0-h3x.gitbook.io/hafnia-hackthon-2025" target="_blank" rel="noopener">Project Documentation</a>
 	</p>
-	<img src="https://media.licdn.com/dms/image/v2/D5622AQEiEEkDcYbzSA/feedshare-shrink_2048_1536/B56Zp.ytDuJ8A4-/0/1763063823917?e=1775088000&v=beta&t=YX2OQojUg-PrNyqbgbga2c4OirKcPSVls2LIEmN7BDY" alt="Hafnia Video Event Analyzer - Milestone Hackathon" class="bento-project-img" />
 </section>
-
-## Skills and Technologies
-
-- AR/VR Development
-- Augmented Reality
-- Android
-- Spatial Mapping
-- CAD Design
-- UI/UX
-- Blender
-- After Effects
-- Visual Coding
-- Videography
-- Digital Twin
-- Laser Cutting
-- Light Baking
 
 <a class="scroll-top-link" href="#top" aria-label="Scroll to top">&#8593;</a>
 

@@ -53,7 +53,7 @@ This file contains:
 - emulator execution loop
 - display rendering
 
-![CHIP-8 project setup screenshot](/assets/img/jekyll/chip8-part2/project-set-up-screen.png)
+![CHIP-8 project setup screenshot](/assets/img/jekyll/chip8-part2/project-set-up-screen.png){: loading="lazy" decoding="async"}
 
 *Project setup snapshot from the initial build phase in Visual Studio.*
 
@@ -89,7 +89,7 @@ Whenever the CHIP-8 CPU executes a draw instruction (`DXYN`), the framebuffer is
 
 The renderer then draws this framebuffer to the screen.
 
-![Space Invaders rendered on CHIP-8 screen](/assets/img/jekyll/chip8-part2/08-space-invaders-screen.png)
+![Space Invaders rendered on CHIP-8 screen](/assets/img/jekyll/chip8-part2/08-space-invaders-screen.png){: loading="lazy" decoding="async"}
 
 *Space Invaders drawn to the screen from the framebuffer.*
 
@@ -257,7 +257,7 @@ To maintain correct behavior:
 
 This allows the emulator to behave close to the original system.
 
-![Disassembly panel with current instruction](/assets/img/jekyll/chip8-part2/06-debugger-registers-panel.png)
+![Disassembly panel with current instruction](/assets/img/jekyll/chip8-part2/06-debugger-registers-panel.png){: loading="lazy" decoding="async"}
 
 *Live debugger controls for timing and execution: run/step/step-back/reset, adjustable clock target (Hz), and register snapshots (`I`, `PC`, `SP`, `V0-VF`).*
 

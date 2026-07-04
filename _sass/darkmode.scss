@@ -71,18 +71,18 @@ body.dark  {
     border-color: rgb(70, 70, 70);
   }
 
-  .about-calendar-section {
-    background: #0d1117;
-    border-color: #30363d;
-  }
-
-  .about-calendar-section h3,
-  .about-linkedin-section h3 {
+  .about-linkedin-section h3,
+  .about-skills-section h3 {
     color: #c9d1d9;
   }
 
-  .about-3dbar-labels {
+  .about-skill-group h4 {
     color: #8b949e;
+  }
+
+  .skill-chips span {
+    background: rgb(34, 34, 34);
+    border-color: rgb(70, 70, 70);
   }
 
   .linkedin-profile-card {
@@ -98,35 +98,6 @@ body.dark  {
 
   .linkedin-profile-card__meta span {
     color: #8b949e;
-  }
-
-  .about-calendar-section .calendar-graph text.wday,
-  .about-calendar-section .calendar-graph text.month,
-  .about-calendar-section text.ContributionCalendar-label,
-  .about-calendar-section .text-small,
-  .about-calendar-section .left.text-muted {
-    fill: #8b949e;
-    color: #8b949e;
-  }
-
-  .about-calendar-section .ContributionCalendar-day[data-level='0'] {
-    background-color: #161b22;
-  }
-
-  .about-calendar-section .ContributionCalendar-day[data-level='1'] {
-    background-color: #0e4429;
-  }
-
-  .about-calendar-section .ContributionCalendar-day[data-level='2'] {
-    background-color: #006d32;
-  }
-
-  .about-calendar-section .ContributionCalendar-day[data-level='3'] {
-    background-color: #26a641;
-  }
-
-  .about-calendar-section .ContributionCalendar-day[data-level='4'] {
-    background-color: #39d353;
   }
 
   .quote-text {

@@ -5,52 +5,60 @@ layout: page
 comments: false
 ---
 
-<section class="about-3dbar-section">
-	<div class="about-3dbar-labels">
-		<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+I'm Jojy — a creative technologist and immersive experience designer passionate about blending design, interactivity, and technology to craft meaningful digital experiences.
+
+Having completed a Master's in Interaction and Experience Design, I bring together a strong technical foundation in C#, C++, Unity3D, and Unreal Engine with a deep curiosity for human-centered design.
+
+Over the past few years, I've worked on projects that merge virtual reality, mixed reality, and interactive systems — from developing a full-scale Meta Quest training simulator to creating immersive AR/VR experiences for brands and entertainment.
+
+I love pushing the boundaries of what's possible with emerging technology — whether prototyping futuristic interfaces, designing 3D interactions, or exploring the intersection of art and computation.
+
+When I'm not experimenting with code or 3D worlds, you'll find me exploring design trends, building side projects, or travelling to find inspiration in new cultures and experiences.
+
+<section class="about-skills-section">
+	<h3>Toolbox</h3>
+	<div class="about-skill-group">
+		<h4>Engines &amp; Graphics</h4>
+		<p class="skill-chips"><span>Unity3D</span><span>Unreal Engine</span><span>Blender</span><span>Light Baking</span></p>
 	</div>
-	<a href="https://github.com/8bitdev0x8" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
-		<img id="contributions-3dbar" src="https://ssr-contributions-svg.vercel.app/_/8bitdev0x8?chart=3dbar&format=svg&legend=true&scale=2.5&dark=false" alt="GitHub Contributions 3D Bar" width="100%" />
-	</a>
+	<div class="about-skill-group">
+		<h4>Languages</h4>
+		<p class="skill-chips"><span>C#</span><span>C++</span><span>JavaScript</span><span>Swift</span></p>
+	</div>
+	<div class="about-skill-group">
+		<h4>Immersive Tech</h4>
+		<p class="skill-chips"><span>AR/VR Development</span><span>Mixed Reality</span><span>Spatial Mapping</span><span>Digital Twin</span></p>
+	</div>
+	<div class="about-skill-group">
+		<h4>Design &amp; Media</h4>
+		<p class="skill-chips"><span>UI/UX</span><span>CAD Design</span><span>After Effects</span><span>Videography</span><span>Laser Cutting</span></p>
+	</div>
 </section>
-<script>
-	(function () {
-		const img = document.getElementById("contributions-3dbar");
-		if (!img) return;
-		const baseUrl = "https://ssr-contributions-svg.vercel.app/_/8bitdev0x8?chart=3dbar&format=svg&legend=true&scale=2.5&dark=";
-		const syncTheme = () => {
-			const isDark = document.body.classList.contains("dark");
-			img.src = baseUrl + isDark;
-		};
-		syncTheme();
-		const observer = new MutationObserver(syncTheme);
-		observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-	})();
-</script>
-
-Jojy is a creative technologist and immersive experience designer passionate about blending design, interactivity, and technology to craft meaningful digital experiences.
-
-Having completed a Master’s in Interaction and Experience Design, he brings together a strong technical foundation in C#, C++, Unity3D, and Unreal Engine with a deep curiosity for human-centered design.
-
-Over the past few years, he has worked on projects that merge virtual reality, mixed reality, and interactive systems — from developing a full-scale Meta Quest training simulator to creating immersive AR/VR experiences for brands and entertainment.
-
-He loves pushing the boundaries of what’s possible with emerging technology — whether prototyping futuristic interfaces, designing 3D interactions, or exploring the intersection of art and computation.
-
-When not experimenting with code or 3D worlds, he can be found exploring design trends, building side projects, or travelling to find inspiration in new cultures and experiences.
 
 <section class="about-linkedin-section">
-	<h3>Connect On LinkedIn</h3>
-	<a class="linkedin-profile-card" href="https://ie.linkedin.com/in/jojysaju" target="_blank" rel="noopener noreferrer" aria-label="Open Jojy S. LinkedIn profile">
-		<span class="linkedin-profile-card__logo" aria-hidden="true">
-			<svg viewBox="0 0 24 24" role="img" focusable="false">
-				<path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 10.01H5.67V18H8.34V10.01ZM7 5.75A1.55 1.55 0 1 0 7 8.85A1.55 1.55 0 1 0 7 5.75ZM18.33 13.5C18.33 11.05 16.89 9.86 15.15 9.86C13.75 9.86 13.13 10.63 12.78 11.17V10.01H10.22V18H12.89V13.82C12.89 12.72 13.1 11.65 14.46 11.65C15.8 11.65 15.82 12.9 15.82 13.89V18H18.5L18.33 13.5Z"/>
-			</svg>
-		</span>
-		<span class="linkedin-profile-card__meta">
-			<strong>Jojy S.</strong>
-			<span>View LinkedIn Profile</span>
-		</span>
-	</a>
+	<h3>Find Me Elsewhere</h3>
+	<div class="about-cards">
+		<a class="linkedin-profile-card" href="https://github.com/8bitdev0x8" target="_blank" rel="noopener noreferrer" aria-label="Open 8bitdev0x8 GitHub profile">
+			<span class="linkedin-profile-card__logo linkedin-profile-card__logo--github" aria-hidden="true">
+				<svg viewBox="0 0 24 24" role="img" focusable="false">
+					<path d="M12 1C5.92 1 1 5.96 1 12.04a10.84 10.84 0 0 0 7.11 10.21c.58.21 1.14-.17 1.14-.75v-1.72a2.77 2.77 0 0 1-1.03.21c-1.42 0-2.26-.77-2.86-2.21-.24-.58-.5-.92-.99-.99-.26-.02-.34-.13-.34-.26 0-.26.43-.45.86-.45.62 0 1.16.39 1.72 1.18.43.62.88.9 1.42.9.54 0 .88-.19 1.37-.69.37-.36.65-.69.9-.9-2.84-.34-4.83-2.38-4.83-5.03 0-1.07.39-2.23 1.03-3-.28-.71-.24-2.21.09-2.84.86-.11 2.02.34 2.71.97.82-.26 1.68-.39 2.73-.39s1.91.13 2.69.37c.67-.6 1.85-1.05 2.71-.95.3.58.34 2.09.06 2.82.69.82 1.05 1.91 1.05 3.03 0 2.64-2 4.64-4.88 5 .73.47 1.22 1.5 1.22 2.69v2.23c0 .64.54 1.01 1.18.75a10.85 10.85 0 0 0 6.94-10.18C23.02 5.96 18.08 1 12 1Z"/>
+				</svg>
+			</span>
+			<span class="linkedin-profile-card__meta">
+				<strong>8bitdev0x8</strong>
+				<span>View GitHub Profile</span>
+			</span>
+		</a>
+		<a class="linkedin-profile-card" href="https://ie.linkedin.com/in/jojysaju" target="_blank" rel="noopener noreferrer" aria-label="Open Jojy S. LinkedIn profile">
+			<span class="linkedin-profile-card__logo" aria-hidden="true">
+				<svg viewBox="0 0 24 24" role="img" focusable="false">
+					<path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 10.01H5.67V18H8.34V10.01ZM7 5.75A1.55 1.55 0 1 0 7 8.85A1.55 1.55 0 1 0 7 5.75ZM18.33 13.5C18.33 11.05 16.89 9.86 15.15 9.86C13.75 9.86 13.13 10.63 12.78 11.17V10.01H10.22V18H12.89V13.82C12.89 12.72 13.1 11.65 14.46 11.65C15.8 11.65 15.82 12.9 15.82 13.89V18H18.5L18.33 13.5Z"/>
+				</svg>
+			</span>
+			<span class="linkedin-profile-card__meta">
+				<strong>Jojy S.</strong>
+				<span>View LinkedIn Profile</span>
+			</span>
+		</a>
+	</div>
 </section>
-
-

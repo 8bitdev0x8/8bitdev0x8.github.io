@@ -138,6 +138,14 @@
     "tags": ["c#", "h264", "networking", "react", "video", "analytics"]
   },
   {
+    "title": "Spotify Coverflow",
+    "category": "software",
+    "url": "/projects/#spotify-coverflow",
+    "github": "https://github.com/8bitdev0x8/Spotify-Coverflow",
+    "excerpt": "Revives Apple's classic Cover Flow as a 3D album-art browser for Spotify — flip through your liked tracks or any public playlist. Pure static site, no frameworks.",
+    "tags": ["javascript", "spotify", "coverflow", "ui", "web", "music"]
+  },
+  {
     "title": "MDM Simulator",
     "category": "software",
     "url": "/projects/#mdm-simulator",
